@@ -97,7 +97,7 @@ Every target has a per-file `review_depth` in `target-reviews.json`. Targets wit
 | 71 / 72 | hyperframes-creative `72de3f297c9a` | `/Users/<user>/.agents/skills/hyperframes-creative` |
 | 64 / 65 | music-to-video `c3c9064f3716` | `/Users/<user>/.claude/plugins/cache/claude-plugins-official/hyperframes/0.8.3/skills/music-to-video` |
 | 63 / 64 | remotion-to-hyperframes `673e7bf03075` | `/Users/<user>/.claude/plugins/cache/claude-plugins-official/hyperframes/0.8.3/skills/remotion-to-hyperframes` |
-| 62 / 64 | remotion-to-hyperframes `3c22157178ba` | `/Users/<user>/Documents/AI_Brain/.agents/skills/remotion-to-hyperframes` |
+| 62 / 64 | remotion-to-hyperframes `3c22157178ba` | `/Users/<user>/Documents/<vault>/.agents/skills/remotion-to-hyperframes` |
 | 61 / 61 | docx `d351bbfe01bf` | `/Users/<user>/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/<cowork-session-id>/<cowork-workspace-id>/skills/docx` |
 | 57 / 58 | Presentations `a759b8ebafea` | `/Users/<user>/.codex/plugins/cache/openai-primary-runtime/presentations/26.909.12148/skills/presentations` |
 | 56 / 63 | seo `63bc30fd9cdd` | `/Users/<user>/.claude/skills/seo` |
@@ -105,7 +105,7 @@ Every target has a per-file `review_depth` in `target-reviews.json`. Targets wit
 | 53 / 53 | xlsx `b08cbf3a6afb` | `/Users/<user>/Library/Application Support/Claude/local-agent-mode-sessions/skills-plugin/<cowork-session-id>/<cowork-workspace-id>/skills/xlsx` |
 | 47 / 53 | impeccable `40a46b6bc1fa` | `/Users/<user>/.agents/skills/impeccable` |
 | 46 / 48 | impeccable `2c076dbc72de` | `/Users/<user>/.claude/skills/impeccable` |
-| 45 / 46 | hyperframes `a64d3df49f24` | `/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes` |
+| 45 / 46 | hyperframes `a64d3df49f24` | `/Users/<user>/Documents/<vault>/.agents/skills/hyperframes` |
 | 43 / 46 | seo-flow `516fc04f9f2e` | `/Users/<user>/.claude/skills/seo-flow` |
 | 34 / 39 | remotion-best-practices `02ff1414aad6` | `/Users/<user>/.agents/skills/remotion-best-practices` |
 | 28 / 30 | pr-to-video `cfe2ba681867` | `/Users/<user>/.claude/plugins/cache/claude-plugins-official/hyperframes/0.8.3/skills/pr-to-video` |

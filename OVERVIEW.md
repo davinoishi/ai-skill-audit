@@ -21,7 +21,7 @@
 | Targets with scanner findings / without | 79 / 61 |
 | Scanner findings | **7,530** (2 critical, 6,439 high, 1,032 medium, 57 low) |
 
-**Sources covered:** `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, the Claude plugin cache (HyperFrames 0.8.3, etc.), Cowork skills, the Codex plugin caches (Office, Sites, template-creator, etc.), AI_Brain project skills, your own commands and scheduled tasks.
+**Sources covered:** `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, the Claude plugin cache (HyperFrames 0.8.3, etc.), Cowork skills, the Codex plugin caches (Office, Sites, template-creator, etc.), <vault> project skills, your own commands and scheduled tasks.
 
 **Method:**
 - Automated scan with [SkillSpector](https://github.com/NVIDIA/SkillSpector) 2.11.2 (NVIDIA, Apache-2.0).
@@ -45,7 +45,7 @@
 
 | # | Finding | Affected | Severity |
 |---|---|---|---|
-| 1 | HyperFrames skills silently self-update ("run silently, don't ask") and auto-upgrade the CLI to `@latest`; package loader accepts `@latest` as pinned | HyperFrames plugin 0.8.3 workflow skills; `hyperframes*` / `general-video` in ~/.claude, ~/.agents, ~/.codex, AI_Brain | High |
+| 1 | HyperFrames skills silently self-update ("run silently, don't ask") and auto-upgrade the CLI to `@latest`; package loader accepts `@latest` as pinned | HyperFrames plugin 0.8.3 workflow skills; `hyperframes*` / `general-video` in ~/.claude, ~/.agents, ~/.codex, <vault> | High |
 | 2 | impeccable runs a 12.7 MB unsigned native binary every session; the binary contains agent directives (ignore autonomy statements, spawn subagents) not visible in its SKILL.md | ~/.claude/skills/impeccable, ~/.agents/skills/impeccable | High / Medium |
 | 3 | media-use: URL guard bypassable (SSRF to LAN/overlay, reproduced); imports an unrelated ancestor `.env` (reproduced); auto `pip install` of torch/transformers; spawns `codex exec` without confirmation | media-use (both copies) | Medium |
 | 4 | SEO skill: redirect/DNS SSRF; OAuth token written with default permissions; Gemini key in plaintext in `~/.claude/settings.json` plus unpinned `npx -y` MCP server (banana extension) | ~/.claude/skills/seo | Medium |
@@ -64,10 +64,10 @@ Also found, with broader context:
 | Action | Detail |
 |---|---|
 | HyperFrames silent update removed | Preamble deleted from 10 workflow skills; router and general-video now require your approval before any skill update or CLI upgrade |
-| HyperFrames CLI pinned | All agent-facing `npx hyperframes` / `@latest` references changed to `hyperframes@0.8.32` (215 files across plugin cache, ~/.claude, ~/.agents, AI_Brain) |
+| HyperFrames CLI pinned | All agent-facing `npx hyperframes` / `@latest` references changed to `hyperframes@0.8.32` (215 files across plugin cache, ~/.claude, ~/.agents, <vault>) |
 | HyperFrames env | `HYPERFRAMES_SKIP_SKILLS=1`, `HYPERFRAMES_SKILL_PKG_VERSION=0.8.32` in Claude Code and Codex |
-| impeccable removed | Both skill copies, 4 Claude subagents, `~/.impeccable`, and AI_Brain's Codex hooks moved to `remediation-2026-09-16/removed-impeccable/`; binaries made non-executable |
-| Claude Code sandbox | All shell commands and skill scripts sandboxed with no unsandboxed fallback. Read/write limited to `~/Documents/Projects-AI`, `~/Documents/AI_Brain`, plus needed tool caches, `~/.config/gh` and `~/.heygen`. Claude's file tools blocked outside those folders; explicit deny rules for other Documents folders, Desktop, Downloads, `~/.ssh`, `~/.aws`, `~/.config`. **Verified:** Desktop, `~/.codex` and home writes are denied |
+| impeccable removed | Both skill copies, 4 Claude subagents, `~/.impeccable`, and <vault>'s Codex hooks moved to `remediation-2026-09-16/removed-impeccable/`; binaries made non-executable |
+| Claude Code sandbox | All shell commands and skill scripts sandboxed with no unsandboxed fallback. Read/write limited to `~/Documents/Projects-AI`, `~/Documents/<vault>`, plus needed tool caches, `~/.config/gh` and `~/.heygen`. Claude's file tools blocked outside those folders; explicit deny rules for other Documents folders, Desktop, Downloads, `~/.ssh`, `~/.aws`, `~/.config`. **Verified:** Desktop, `~/.codex` and home writes are denied |
 | gh | Runs outside the sandbox (`excludedCommands`) with normal approval, because its token is in the Keychain; `gh auth status` confirmed working |
 | Codex trust | Home-folder (`/Users/<user>`) trusted-project entry removed |
 | Telemetry off | Claude Code: `DISABLE_TELEMETRY`, `DISABLE_ERROR_REPORTING`, feedback survey off. Codex: analytics, `/feedback`, OpenTelemetry exporters off. Both: `HYPERFRAMES_NO_TELEMETRY=1`, `DO_NOT_TRACK=1` |

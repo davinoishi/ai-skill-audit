@@ -291,7 +291,7 @@
    "title": "Ingest commands persist untrusted source text into the AI Brain wiki without a data-not-instructions rule",
    "files": [
     "~/.claude/commands/ai-ingest.md",
-    "AI_Brain/.claude/commands/ingest.md"
+    "<vault>/.claude/commands/ingest.md"
    ],
    "status": "design_risk",
    "detail": "Prompt-injection text inside an ingested article can be copied to raw/ and summarized into wiki pages that /query later reads as trusted context.",
@@ -73479,10 +73479,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/remotion-to-hyperframes",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/remotion-to-hyperframes",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/remotion-to-hyperframes/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/remotion-to-hyperframes/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/remotion-to-hyperframes/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/remotion-to-hyperframes/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/3c22157178ba9fadb9cc824c2656913398f0d8d3519896a87cf652c6284c0194",
    "review_status": "reviewed_with_gaps",
@@ -75015,8 +75015,8 @@
    "original_target": "/Users/<user>/.agents/skills/remotion-best-practices",
    "original_locations": [
     "/Users/<user>/.agents/skills/remotion-best-practices/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/remotion-best-practices/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/remotion-best-practices/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/remotion-best-practices/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/remotion-best-practices/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/02ff1414aad67e63464ea446159b980da75afc59b25ac17c6984a34966fbd824",
    "review_status": "reviewed_with_gaps",
@@ -76983,15 +76983,15 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/hyperframes/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/hyperframes/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/a64d3df49f24b2ab76944d83c2b250c5de1f3bca96c1eee5655c6d06c1db57ee",
    "review_status": "reviewed_with_gaps",
    "summary_assessment": [
-    "Older single-skill HyperFrames guide (composition rules, captions, design picker, animation map). No silent self-update preamble. Uses unpinned `npx hyperframes lint/validate/inspect/render`. Compositions load GSAP from jsdelivr pinned @3.14.2. Located in the AI_Brain vault's .agents directory, so it is active for agents started in that vault."
+    "Older single-skill HyperFrames guide (composition rules, captions, design picker, animation map). No silent self-update preamble. Uses unpinned `npx hyperframes lint/validate/inspect/render`. Compositions load GSAP from jsdelivr pinned @3.14.2. Located in the <vault> vault's .agents directory, so it is active for agents started in that vault."
    ],
    "files_total": 46,
    "files_by_review_depth": {
@@ -78391,10 +78391,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes-media",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes-media",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes-media/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/hyperframes-media/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes-media/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/hyperframes-media/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/a91805ba85876a3bf91063e1d36c8e21d5c4b52123ac4178ed06d0c48c0ade6e",
    "review_status": "reviewed_no_open_gaps",
@@ -78623,10 +78623,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/website-to-hyperframes",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/website-to-hyperframes",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/website-to-hyperframes/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/website-to-hyperframes/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/website-to-hyperframes/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/website-to-hyperframes/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/3eb3070138bb0965ab8330ddfc162a6752458ff1f9b4ac7300f5f4fd21ef8c36",
    "review_status": "reviewed_with_gaps",
@@ -78738,10 +78738,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/contribute-catalog",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/contribute-catalog",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/contribute-catalog/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/contribute-catalog/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/contribute-catalog/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/contribute-catalog/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/98d2e2fb7aa433424d8df69c452d9d93b419938cd47251d94b704b181f9338ac",
    "review_status": "reviewed_with_gaps",
@@ -78814,10 +78814,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes-cli",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes-cli",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes-cli/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/hyperframes-cli/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes-cli/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/hyperframes-cli/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/4de3d2af55cf33be5a24f1c826c303156ff064e8e990310bcb7bdb6f3afb99fa",
    "review_status": "reviewed_no_open_gaps",
@@ -78934,10 +78934,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/gsap",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/gsap",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/gsap/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/gsap/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/gsap/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/gsap/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/06711a201fbde1a05b108112c2c4e40831fe7c0369294b2293eca0d3019970ea",
    "review_status": "reviewed_no_open_gaps",
@@ -79067,10 +79067,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/tailwind",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/tailwind",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/tailwind/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/tailwind/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/tailwind/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/tailwind/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/a768e38f616c7d293fa8580f16cbd7b53aa392e24694b68a6e8dcba86e6db9bc",
    "review_status": "reviewed_no_open_gaps",
@@ -79311,10 +79311,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/animejs",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/animejs",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/animejs/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/animejs/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/animejs/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/animejs/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/22344c279ff68fe7f7df6b4548922db16805a81b57d4bae667eba596d757fa2e",
    "review_status": "reviewed_no_open_gaps",
@@ -79417,10 +79417,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/css-animations",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/css-animations",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/css-animations/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/css-animations/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/css-animations/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/css-animations/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/a659b49cdde78af1bc1f20b282197d8bf8490241ff5b0f2d5cc776688dc846f0",
    "review_status": "reviewed_no_open_gaps",
@@ -79470,10 +79470,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/lottie",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/lottie",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/lottie/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/lottie/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/lottie/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/lottie/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/6799e0bb608a0ca99a1cdbeb797907448d46ba3229a476e067fb34b0e003dc17",
    "review_status": "reviewed_no_open_gaps",
@@ -79527,10 +79527,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/three",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/three",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/three/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/three/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/three/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/three/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/51ac7ff8911a3efddc79f1c58fcd4c2017ac943543989eae97e70d3d7fc0caa1",
    "review_status": "reviewed_no_open_gaps",
@@ -79579,10 +79579,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/waapi",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/waapi",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/waapi/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/waapi/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/waapi/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/waapi/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/7d2fb14236e9a11e795afeaf917660f4ce83b02407a25ccb2a88c64273270a61",
    "review_status": "reviewed_no_open_gaps",
@@ -80334,7 +80334,7 @@
    "scanner_static_coverage_complete": true,
    "scanner_ledger_exceptions": {},
    "coverage_gaps": [
-    "Referenced /Users/<user>/Documents/AI_Brain/CLAUDE.md and domain CLAUDE.md files are outside the snapshot and were not reviewed"
+    "Referenced /Users/<user>/Documents/<vault>/CLAUDE.md and domain CLAUDE.md files are outside the snapshot and were not reviewed"
    ],
    "recommended_next_steps": [
     "AIBRAIN-INGEST-PERSISTENCE: Add an explicit rule to treat sources as data, strip instruction-like content, and review wiki diffs"
@@ -80430,7 +80430,7 @@
    "scanner_static_coverage_complete": true,
    "scanner_ledger_exceptions": {},
    "coverage_gaps": [
-    "AI_Brain CLAUDE.md not in snapshot"
+    "<vault> CLAUDE.md not in snapshot"
    ],
    "recommended_next_steps": []
   },
@@ -82235,10 +82235,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes-registry",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes-registry",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/hyperframes-registry/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/hyperframes-registry/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/hyperframes-registry/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/hyperframes-registry/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/503e450d17015992cd628c30ce81e86876d747a7ff0f586323a6a5887dfa9c91",
    "review_status": "reviewed_with_gaps",
@@ -82344,9 +82344,9 @@
    "apps": [
     "claude"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.claude/commands/ingest.md",
+   "original_target": "/Users/<user>/Documents/<vault>/.claude/commands/ingest.md",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.claude/commands/ingest.md"
+    "/Users/<user>/Documents/<vault>/.claude/commands/ingest.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/commands/command-3-4afca51eee819ea3/ingest.md",
    "review_status": "reviewed_with_gaps",
@@ -82386,7 +82386,7 @@
    "scanner_static_coverage_complete": true,
    "scanner_ledger_exceptions": {},
    "coverage_gaps": [
-    "AI_Brain root/domain CLAUDE.md not in snapshot"
+    "<vault> root/domain CLAUDE.md not in snapshot"
    ],
    "recommended_next_steps": [
     "AIBRAIN-INGEST-PERSISTENCE: Add an explicit rule to treat sources as data, strip instruction-like content, and review wiki diffs"
@@ -82400,9 +82400,9 @@
    "apps": [
     "claude"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.claude/commands/lint.md",
+   "original_target": "/Users/<user>/Documents/<vault>/.claude/commands/lint.md",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.claude/commands/lint.md"
+    "/Users/<user>/Documents/<vault>/.claude/commands/lint.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/commands/command-4-29c0cb4b8ddb75b4/lint.md",
    "review_status": "reviewed_with_gaps",
@@ -82544,9 +82544,9 @@
    "apps": [
     "claude"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.claude/commands/query.md",
+   "original_target": "/Users/<user>/Documents/<vault>/.claude/commands/query.md",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.claude/commands/query.md"
+    "/Users/<user>/Documents/<vault>/.claude/commands/query.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/commands/command-5-804c1399a8bb1107/query.md",
    "review_status": "reviewed_with_gaps",
@@ -84651,10 +84651,10 @@
     "claude",
     "codex"
    ],
-   "original_target": "/Users/<user>/Documents/AI_Brain/.agents/skills/typegpu",
+   "original_target": "/Users/<user>/Documents/<vault>/.agents/skills/typegpu",
    "original_locations": [
-    "/Users/<user>/Documents/AI_Brain/.agents/skills/typegpu/SKILL.md",
-    "/Users/<user>/Documents/AI_Brain/.claude/skills/typegpu/SKILL.md"
+    "/Users/<user>/Documents/<vault>/.agents/skills/typegpu/SKILL.md",
+    "/Users/<user>/Documents/<vault>/.claude/skills/typegpu/SKILL.md"
    ],
    "snapshot_path": "/Users/<user>/Documents/Projects-AI/HomeNetwork/deployment/skillspector/followup/input/bundles/2540ac2555264f85a4d74f9826f6303cd42884ae4c3328a95b370b08d12dae01",
    "review_status": "reviewed_no_open_gaps",
