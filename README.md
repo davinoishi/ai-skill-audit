@@ -38,3 +38,5 @@ These files are sanitized copies. Replaced throughout: the machine username (`/U
 The report names three vendors' products and quotes their instruction text, because that's the evidence. No intent is claimed and none was found. If you maintain one of these skills and have fixed something here, that's the outcome this was written for.
 
 The scan used [SkillSpector](https://github.com/NVIDIA/SkillSpector) 2.11.2 — the 7,530 findings reviewed here are its raw output. The review, the verdicts and the patch are independent work, unaffiliated with NVIDIA or any vendor named. No warranty — check the evidence yourself before acting on it.
+
+Licensed [MIT](LICENSE). Quoted instruction text from the reviewed skills remains the property of its respective authors and is reproduced here as evidence under fair use.
