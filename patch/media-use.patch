@@ -1,0 +1,211 @@
+--- a/scripts/lib/freeze.mjs
++++ b/scripts/lib/freeze.mjs
+@@ -1,13 +1,67 @@
+ import { writeFileSync, copyFileSync, mkdirSync } from "node:fs";
+ import { dirname } from "node:path";
++import { lookup } from "node:dns/promises";
++import { isIP } from "node:net";
+ 
+ // ponytail: bound the download so a hostile/runaway URL can't fill the disk.
+ // 256MB covers any real media asset; raise if 4K video sources ever exceed it.
+ const MAX_FREEZE_BYTES = 256 * 1024 * 1024;
++// LOCAL PATCH (2026-09-16): follow redirects by hand so every hop is re-checked.
++const MAX_REDIRECTS = 5;
+ 
++// LOCAL PATCH (2026-09-16): SSRF hardening. Every URL fetched here — the first
++// request and every redirect hop — must be http(s), have a non-private literal
++// host, and resolve (all DNS answers) to public addresses only. This closes the
++// literal-regex bypasses ([::ffff:7f00:1], 100.64.0.0/10 CGNAT/noBGP overlay,
++// DNS names pointing at private IPs, redirects to private hosts).
++// Residual: a DNS answer that changes between this check and the connection
++// (rebinding) is not pinned; when a proxy is in use the proxy resolves the name.
++export async function assertPublicUrl(u) {
++  let url;
++  try {
++    url = new URL(u);
++  } catch {
++    throw new Error(`freeze blocked: invalid URL`);
++  }
++  if (url.protocol !== "http:" && url.protocol !== "https:")
++    throw new Error(`freeze blocked: only http(s) URLs are allowed`);
++  if (url.username || url.password) throw new Error(`freeze blocked: credentials in URL`);
++  const host = bareHost(url.hostname);
++  if (isPrivateHostname(host)) throw new Error(`freeze blocked: private/local host ${host}`);
++  if (isIP(host)) return url;
++  let answers;
++  try {
++    answers = await lookup(host, { all: true, verbatim: true });
++  } catch (e) {
++    throw new Error(`freeze failed: cannot resolve ${host} (${e.code || e.message})`);
++  }
++  if (!answers.length) throw new Error(`freeze failed: no addresses for ${host}`);
++  for (const a of answers) {
++    if (isPrivateAddress(a.address))
++      throw new Error(`freeze blocked: ${host} resolves to private/local address ${a.address}`);
++  }
++  return url;
++}
++
+ export async function freezeUrl(url, destPath) {
+   const where = String(url).slice(0, 80);
+-  const res = await fetch(url);
++  let current = String(url);
++  let res;
++  for (let hop = 0; ; hop++) {
++    await assertPublicUrl(current);
++    res = await fetch(current, { redirect: "manual" });
++    if (res.status >= 300 && res.status < 400 && res.headers.get("location")) {
++      if (hop >= MAX_REDIRECTS) throw new Error(`freeze failed: too many redirects for ${where}`);
++      try {
++        await res.body?.cancel();
++      } catch {
++        /* ignore */
++      }
++      current = new URL(res.headers.get("location"), current).href;
++      continue;
++    }
++    break;
++  }
+   if (!res.ok) throw new Error(`freeze failed: HTTP ${res.status} for ${where}`);
+ 
+   // Fail fast on an advertised oversize body before reading a single byte.
+@@ -47,15 +101,84 @@
+   /(^|\.)(youtube\.com|youtu\.be|vimeo\.com|tiktok\.com|instagram\.com|twitter\.com|x\.com|facebook\.com|dailymotion\.com)$/i;
+ const MEDIA_EXT = /\.(mp3|wav|m4a|aac|ogg|flac|mp4|mov|webm|mkv|png|jpe?g|webp|gif|svg|avif)$/i;
+ 
+-// SSRF guard (m11): a user-supplied --from URL must not point at the local host
+-// or a private network. Blocks loopback/localhost, RFC1918, link-local, and the
+-// IPv6 equivalents on the literal hostname.
+-// ponytail: literal-host check only; a DNS name that *resolves* to a private IP
+-// (rebinding) still passes — add resolve-then-check if --from ever fetches from
+-// untrusted hostnames at scale.
+-const PRIVATE_HOST =
+-  /^(localhost|.*\.local|.*\.internal|127\.|10\.|0\.|169\.254\.|192\.168\.|172\.(1[6-9]|2\d|3[01])\.|\[?(::1|::ffff:127\.|f[cd][0-9a-f]{2}:|fe80:))/i;
++// SSRF guard (m11), LOCAL PATCH: literal-host check using parsed addresses instead
++// of a prefix regex. freezeUrl additionally resolves DNS and re-checks redirects.
++const PRIVATE_NAME = /(^|\.)(localhost|local|internal|lan|home|home\.arpa|localdomain|intranet|corp|private)$/i;
+ 
++function bareHost(h) {
++  return String(h).replace(/^\[|\]$/g, "").replace(/%.*$/, "").replace(/\.$/, "").toLowerCase();
++}
++
++function ipv4ToInt(s) {
++  const p = s.split(".").map(Number);
++  return ((p[0] << 24) >>> 0) + (p[1] << 16) + (p[2] << 8) + p[3];
++}
++
++function inV4(n, base, bits) {
++  const mask = bits === 0 ? 0 : (~0 << (32 - bits)) >>> 0;
++  return (n & mask) >>> 0 === (ipv4ToInt(base) & mask) >>> 0;
++}
++
++function isPrivateV4(s) {
++  const n = ipv4ToInt(s);
++  return [
++    ["0.0.0.0", 8], ["10.0.0.0", 8], ["100.64.0.0", 10], ["127.0.0.0", 8],
++    ["169.254.0.0", 16], ["172.16.0.0", 12], ["192.0.0.0", 24], ["192.0.2.0", 24],
++    ["192.88.99.0", 24], ["192.168.0.0", 16], ["198.18.0.0", 15], ["198.51.100.0", 24],
++    ["203.0.113.0", 24], ["224.0.0.0", 4], ["240.0.0.0", 4],
++  ].some(([b, bits]) => inV4(n, b, bits));
++}
++
++function expandV6(s) {
++  let str = s;
++  const v4 = str.match(/(\d+\.\d+\.\d+\.\d+)$/);
++  if (v4) {
++    const n = ipv4ToInt(v4[1]);
++    str = str.slice(0, -v4[1].length) + ((n >>> 16) & 0xffff).toString(16) + ":" + (n & 0xffff).toString(16);
++  }
++  const [head, tail] = str.split("::");
++  const h = head ? head.split(":") : [];
++  const t = tail !== undefined ? (tail ? tail.split(":") : []) : [];
++  const fill = str.includes("::") ? Array(8 - h.length - t.length).fill("0") : [];
++  return [...h, ...fill, ...t].map((x) => parseInt(x || "0", 16));
++}
++
++function isPrivateV6(s) {
++  const w = expandV6(s);
++  if (w.length !== 8 || w.some((x) => Number.isNaN(x))) return true; // unparseable → refuse
++  const embeddedV4 = (a, b) => `${a >> 8}.${a & 255}.${b >> 8}.${b & 255}`;
++  if (w.every((x) => x === 0)) return true; // ::
++  if (w.slice(0, 7).every((x) => x === 0) && w[7] === 1) return true; // ::1
++  if (w.slice(0, 5).every((x) => x === 0) && (w[5] === 0xffff || w[5] === 0))
++    return isPrivateV4(embeddedV4(w[6], w[7])); // ::ffff:a.b.c.d mapped / ::a.b.c.d compat
++  if (w[0] === 0x64 && w[1] === 0xff9b) return isPrivateV4(embeddedV4(w[6], w[7])); // NAT64
++  if (w[0] === 0x2002) return isPrivateV4(embeddedV4(w[1], w[2])); // 6to4
++  if ((w[0] & 0xfe00) === 0xfc00) return true; // fc00::/7 ULA
++  if ((w[0] & 0xffc0) === 0xfe80) return true; // fe80::/10 link-local
++  if ((w[0] & 0xffc0) === 0xfec0) return true; // fec0::/10 site-local (deprecated)
++  if ((w[0] & 0xff00) === 0xff00) return true; // multicast
++  if (w[0] === 0x2001 && w[1] === 0x0db8) return true; // documentation
++  if (w[0] === 0x0100 && w[1] === 0 && w[2] === 0 && w[3] === 0) return true; // discard
++  return false;
++}
++
++export function isPrivateAddress(addr) {
++  const a = bareHost(addr);
++  const v = isIP(a);
++  if (v === 4) return isPrivateV4(a);
++  if (v === 6) return isPrivateV6(a);
++  return true; // not an IP → treat as unsafe
++}
++
++export function isPrivateHostname(hostname) {
++  const h = bareHost(hostname);
++  if (!h) return true;
++  if (isIP(h)) return isPrivateAddress(h);
++  if (PRIVATE_NAME.test(h)) return true;
++  if (!h.includes(".")) return true; // single-label names resolve via local search domains
++  return false;
++}
++
+ export function isDirectMediaUrl(u) {
+   let url;
+   try {
+@@ -65,6 +188,6 @@
+   }
+   if (url.protocol !== "http:" && url.protocol !== "https:") return false;
+   if (PLATFORM_HOSTS.test(url.hostname)) return false;
+-  if (PRIVATE_HOST.test(url.hostname)) return false;
++  if (isPrivateHostname(url.hostname)) return false;
+   return MEDIA_EXT.test(url.pathname);
+ }
+--- a/audio/scripts/lib/heygen.mjs
++++ b/audio/scripts/lib/heygen.mjs
+@@ -17,6 +17,20 @@
+ export const HEYGEN_CLIENT_SOURCE_HEADERS = { "X-HeyGen-Client-Source": "media-use" };
+ 
+ // Walk up ≤5 dirs from startDir; load the first .env (shell env always wins).
++// LOCAL PATCH (2026-09-16): only the provider credential/config keys media-use
++// actually reads are imported (not every variable in some unrelated ancestor
++// .env), and the walk stops at the first project boundary (a directory holding
++// hyperframes.json, package.json or .git) so it never climbs into a parent project.
++const ENV_ALLOWLIST = new Set([
++  "HEYGEN_API_KEY",
++  "HYPERFRAMES_API_KEY",
++  "HEYGEN_CONFIG_DIR",
++  "ELEVENLABS_API_KEY",
++  "GEMINI_API_KEY",
++  "GOOGLE_API_KEY",
++]);
++const PROJECT_MARKERS = ["hyperframes.json", "package.json", ".git"];
++
+ export function loadEnvFromDir(startDir) {
+   let dir = resolve(startDir);
+   for (let i = 0; i < 5; i++) {
+@@ -29,6 +43,7 @@
+         const eq = line.indexOf("=");
+         if (eq < 1) continue;
+         const key = line.slice(0, eq).trim();
++        if (!ENV_ALLOWLIST.has(key)) continue;
+         let val = line.slice(eq + 1).trim();
+         if (val.startsWith('"') || val.startsWith("'")) {
+           const q = val[0];
+@@ -39,6 +54,7 @@
+       }
+       return;
+     }
++    if (PROJECT_MARKERS.some((m) => existsSync(join(dir, m)))) break;
+     const parent = dirname(dir);
+     if (parent === dir) break;
+     dir = parent;

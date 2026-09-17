@@ -1,0 +1,2742 @@
+{
+ "generated": "2026-09-16",
+ "inputs": {
+  "manifest_targets": 140,
+  "ledger_keys": 7530,
+  "files_to_review": 10904
+ },
+ "targets": {
+  "in_target_reviews": 140,
+  "unique": 140,
+  "missing_from_reviews": [],
+  "extra_not_in_manifest": [],
+  "with_findings": 79,
+  "without_findings": 61,
+  "review_status": {
+   "reviewed_with_gaps": 119,
+   "reviewed_no_open_gaps": 21
+  }
+ },
+ "finding_keys": {
+  "in_assessments": 7530,
+  "unique": 7530,
+  "duplicates": 0,
+  "missing_from_assessments": [],
+  "extra_not_in_ledger": [],
+  "finding_id_and_rule_match_ledger": true,
+  "by_disposition": {
+   "false_positive": 1139,
+   "confirmed_concern": 71,
+   "expected_behavior": 6192,
+   "unresolved": 128
+  },
+  "reviewed_decided": 7402,
+  "unresolved": 128,
+  "decision_groups": 148,
+  "keys_with_superseded_decision": 1
+ },
+ "checks_passed": true,
+ "completion": "Review complete for all keys with explicit unresolved items; target-level reading incomplete for the files listed in the worklist.",
+ "resumable_worklist": [
+  {
+   "type": "finding",
+   "key": "086859be5f81cfcd7c7fbb343d624496ab6dfd9da0dd315520866951affcffe2:56",
+   "rule": "RA2",
+   "file": "scripts/lib/telemetry.mjs",
+   "needed": "Upstream CLI source (hyperframes telemetry) to confirm what is sent with the shared anonymousId; not in snapshot."
+  },
+  {
+   "type": "finding",
+   "key": "0952da6cdbcd2e7ad7894fb480d1d7c3410bcd10407d55588b263ae249d75c5d:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "2c076dbc72de2784718db11468e1a9fb2a71287a7c8eae29f8f7b68dfb3649d5:6",
+   "rule": "SC9",
+   "file": "scripts/bin/darwin-arm64/impeccable",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "2c076dbc72de2784718db11468e1a9fb2a71287a7c8eae29f8f7b68dfb3649d5:7",
+   "rule": "YR4",
+   "file": "scripts/bin/darwin-arm64/impeccable",
+   "needed": "Reverse engineering or isolated execution of the binary to determine whether the matched strings are ever emitted to an agent."
+  },
+  {
+   "type": "finding",
+   "key": "35d2cc77762ba39ecc8a525c9ca1f1a66aab8fee7fbbec7d21fc053400b70dba:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "3c22157178ba9fadb9cc824c2656913398f0d8d3519896a87cf652c6284c0194:18",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "3c22157178ba9fadb9cc824c2656913398f0d8d3519896a87cf652c6284c0194:20",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "3c22157178ba9fadb9cc824c2656913398f0d8d3519896a87cf652c6284c0194:22",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "3c22157178ba9fadb9cc824c2656913398f0d8d3519896a87cf652c6284c0194:24",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "40a46b6bc1fa2e4663b4aa0f75a51b50f7739c2ca51c48b999a4d745ac37f3e1:6",
+   "rule": "SC9",
+   "file": "scripts/bin/darwin-arm64/impeccable",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "40a46b6bc1fa2e4663b4aa0f75a51b50f7739c2ca51c48b999a4d745ac37f3e1:7",
+   "rule": "YR4",
+   "file": "scripts/bin/darwin-arm64/impeccable",
+   "needed": "Reverse engineering or isolated execution of the binary to determine whether the matched strings are ever emitted to an agent."
+  },
+  {
+   "type": "finding",
+   "key": "52f41c05f4f37378fa3cc519a3dd8bc12e6a411eefde4edbb7372ea8aa235ac8:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "553101bd77f16f145e9080706d9ce3d3c7c667ed6df97bc4c1e3f7f995c07b32:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "553101bd77f16f145e9080706d9ce3d3c7c667ed6df97bc4c1e3f7f995c07b32:2",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "553101bd77f16f145e9080706d9ce3d3c7c667ed6df97bc4c1e3f7f995c07b32:4",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "553101bd77f16f145e9080706d9ce3d3c7c667ed6df97bc4c1e3f7f995c07b32:6",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "553101bd77f16f145e9080706d9ce3d3c7c667ed6df97bc4c1e3f7f995c07b32:7",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "673e7bf03075e37fab08cb619088e471b6dd3cbd1589819a0bfaafc10cdd546d:19",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "673e7bf03075e37fab08cb619088e471b6dd3cbd1589819a0bfaafc10cdd546d:21",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "673e7bf03075e37fab08cb619088e471b6dd3cbd1589819a0bfaafc10cdd546d:23",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "673e7bf03075e37fab08cb619088e471b6dd3cbd1589819a0bfaafc10cdd546d:25",
+   "rule": "SC4",
+   "file": "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:20",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/81d243bd2c585b0f4821__mypyc.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:21",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libXau.6.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:22",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libavif.16.4.1.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:23",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libbrotlicommon.1.2.0.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:24",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libbrotlidec.1.2.0.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:25",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libfreetype.6.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:26",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libharfbuzz.0.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:27",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libjpeg.62.4.0.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:28",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/liblcms2.2.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:29",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/liblzma.5.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:30",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libopenjp2.2.5.4.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:31",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libpng16.16.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:32",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libsharpyuv.0.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:33",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libtiff.6.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:34",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libwebp.7.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:35",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libwebpdemux.2.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:36",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libwebpmux.3.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:37",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libxcb.1.1.0.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:38",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/.dylibs/libz.1.3.1.zlib-ng.dylib",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:225",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_avif.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:228",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_imaging.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:229",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_imagingcms.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:230",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_imagingft.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:231",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_imagingmath.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:232",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_imagingmorph.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:233",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_imagingtk.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:238",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/PIL/_webp.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:246",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/_brotli.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:247",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/_cffi_backend.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:336",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/charset_normalizer/cd.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:344",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/charset_normalizer/md.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:359",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/contourpy/_contourpy.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:409",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/cryptography/hazmat/bindings/_rust.abi3.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:643",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/fontTools/cu2qu/cu2qu.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:690",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/fontTools/feaLib/lexer.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:755",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/fontTools/misc/bezierTools.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:875",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/fontTools/pens/momentsPen.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:903",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/fontTools/qu2cu/qu2cu.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:1247",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/fontTools/varLib/iup.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:1271",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/google/_upb/_message.abi3.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:1913",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/greenlet/_greenlet.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:1942",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/greenlet/tests/_test_extension.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:1943",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/greenlet/tests/_test_extension_cpp.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:1990",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/grpc/_cython/cygrpc.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2121",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/kiwisolver/_cext.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2134",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/_elementpath.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2136",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/builder.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2140",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/etree.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2158",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/html/_difflib.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2165",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/html/diff.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2183",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/objectify.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2185",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/lxml/sax.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2272",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/_c_internal_utils.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2282",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/_image.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2287",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/_path.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2289",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/_qhull.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2293",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/_tri.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2346",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/backends/_backend_agg.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2350",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/backends/_macosx.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2351",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/backends/_tkagg.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2406",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/matplotlib/ft2font.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2848",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_multiarray_tests.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2849",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_multiarray_umath.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2850",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_operand_flag_tests.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2851",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_rational_tests.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2852",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_simd.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2854",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_struct_ufunc_tests.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:2857",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/_core/_umath_tests.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3228",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/fft/_pocketfft_umath.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3355",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/linalg/_umath_linalg.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3356",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/linalg/lapack_lite.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3457",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_bounded_integers.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3458",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_common.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3467",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_generator.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3468",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_mt19937.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3469",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_pcg64.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3470",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_philox.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3472",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/_sfc64.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3473",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/bit_generator.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:3474",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/numpy/random/mtrand.cpython-313-darwin.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6085",
+   "rule": "SC9",
+   "file": ".venv/lib/python3.13/site-packages/zopfli/zopfli.abi3.so",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6125",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6126",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6127",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6128",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6129",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6130",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa:6131",
+   "rule": "SC4",
+   "file": "requirements.txt",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "finding",
+   "key": "72de3f297c9a3a137f13843fe67f6cc4dd76244f4c9787933d69efb5c367cf02:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "965b323bcb61288a7867348c767e1cffba1a36de28309ae37112ed24d070e819:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "a759b8ebafea94d4c54605066dfc47f8837520ceb2d77c454260e6a3ddfd7dcd:1",
+   "rule": "SC8",
+   "file": "container_tools/__pycache__/",
+   "needed": "Bytecode equivalence check with the matching CPython minor version (3.12 not installed) or recompilation in an isolated interpreter."
+  },
+  {
+   "type": "finding",
+   "key": "a759b8ebafea94d4c54605066dfc47f8837520ceb2d77c454260e6a3ddfd7dcd:2",
+   "rule": "SC8",
+   "file": "container_tools/__pycache__/runtime_helpers.cpython-312.pyc",
+   "needed": "Bytecode equivalence check with the matching CPython minor version (3.12 not installed) or recompilation in an isolated interpreter."
+  },
+  {
+   "type": "finding",
+   "key": "a759b8ebafea94d4c54605066dfc47f8837520ceb2d77c454260e6a3ddfd7dcd:3",
+   "rule": "SC9",
+   "file": "container_tools/__pycache__/runtime_helpers.cpython-312.pyc",
+   "needed": "Provenance for opaque native code: vendor signature / reproducible build / hash match against the upstream wheel or release artifact, or isolated dynamic analysis."
+  },
+  {
+   "type": "finding",
+   "key": "ad421b645c528bb9488b75f5080c2047b8aea301dbdd4e15dfebd78794d425ea:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "c8e57b32fda0d35983c74f5cde1ae5f3a62a789a08bd08c8e1d15c6037902ef5:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "c8e57b32fda0d35983c74f5cde1ae5f3a62a789a08bd08c8e1d15c6037902ef5:1",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "c9c974271603d1dde3619caf22919822e104694bfa3699218d24cc7f17d04710:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "cfe2ba681867a23bef413305518da3dc2301546119ffa5da5747b8c774ff4857:1",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "cfe2ba681867a23bef413305518da3dc2301546119ffa5da5747b8c774ff4857:2",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "cfe2ba681867a23bef413305518da3dc2301546119ffa5da5747b8c774ff4857:3",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "cfe2ba681867a23bef413305518da3dc2301546119ffa5da5747b8c774ff4857:4",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "d9b54ccd300a2d05c175ee07be46e3c7b53ff031577e8702ddcf12a65931a9e4:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "d98f7cb7b07326ac4fc6535b05128fb4dc6ef868d55f0dcae5ba48b44ed27cf2:55",
+   "rule": "RA2",
+   "file": "scripts/lib/telemetry.mjs",
+   "needed": "Upstream CLI source (hyperframes telemetry) to confirm what is sent with the shared anonymousId; not in snapshot."
+  },
+  {
+   "type": "finding",
+   "key": "dfac9a5b177c2a50988f7a1eddf110ef31a01f90dcdf2f3af3554fb4372f1a92:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "f314adc72d3083418e0c2cd5ab34dfa953138f1b65fa8d9af4f14bcd56e481e3:0",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "f314adc72d3083418e0c2cd5ab34dfa953138f1b65fa8d9af4f14bcd56e481e3:1",
+   "rule": "AE1",
+   "file": "SKILL.md",
+   "needed": "Complete line-by-line read of the referenced file."
+  },
+  {
+   "type": "finding",
+   "key": "ffdb4e02856830e9f5d75d974f8eaed38dce61c1a93c5ce9b8c3d342773ba14b:7",
+   "rule": "SC4",
+   "file": "templates/vinext-starter/package-lock.json",
+   "needed": "Version-specific advisory check (OSV/GHSA lookup against the exact installed or locked version) - requires authorised offline advisory DB or network lookup."
+  },
+  {
+   "type": "target_files",
+   "target_id": "a759b8ebafea94d4c54605066dfc47f8837520ceb2d77c454260e6a3ddfd7dcd",
+   "names": [
+    "Presentations"
+   ],
+   "files_not_fully_read": 57,
+   "sample": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "artifact_tool_docs/API_QUICK_START.md",
+    "artifact_tool_docs/api/API_DOCS.md",
+    "artifact_tool_docs/api/references/auto-layout.spec.md",
+    "artifact_tool_docs/api/references/charts.spec.md",
+    "artifact_tool_docs/api/references/comments.md",
+    "artifact_tool_docs/api/references/connectors.md",
+    "artifact_tool_docs/api/references/cookbook/imported-deck.md",
+    "artifact_tool_docs/api/references/cookbook/layout.md",
+    "artifact_tool_docs/api/references/fill.spec.md",
+    "artifact_tool_docs/api/references/help.md",
+    "artifact_tool_docs/api/references/images.spec.md",
+    "artifact_tool_docs/api/references/inspect.md",
+    "artifact_tool_docs/api/references/jsx.md",
+    "artifact_tool_docs/api/references/layout.spec.md",
+    "artifact_tool_docs/api/references/master.spec.md",
+    "artifact_tool_docs/api/references/presentation.spec.md",
+    "artifact_tool_docs/api/references/rich-text.spec.md",
+    "artifact_tool_docs/api/references/shapes.spec.md",
+    "artifact_tool_docs/api/references/slide.spec.md",
+    "artifact_tool_docs/api/references/speaker-notes.spec.md",
+    "artifact_tool_docs/api/references/styles.spec.md",
+    "artifact_tool_docs/api/references/tables.spec.md",
+    "artifact_tool_docs/api/references/theme.spec.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "164205dccb5da6ef33adaf3cea2926957425ec583855640088adc0f8cc1b0908",
+   "names": [
+    "documents"
+   ],
+   "files_not_fully_read": 79,
+   "sample": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "agents/openai.yaml",
+    "container_tools/mark_artifact_operation_started.mjs",
+    "examples/end_to_end_smoke_test.md",
+    "manifest.txt",
+    "ooxml/comments.md",
+    "ooxml/hyperlinks_and_fields.md",
+    "ooxml/rels_and_content_types.md",
+    "ooxml/tracked_changes.md",
+    "references/template-elicitation.md",
+    "render_docx.py",
+    "scripts/a11y_audit.py",
+    "scripts/accept_tracked_changes.py",
+    "scripts/add_tracked_replacements.py",
+    "scripts/apply_template_styles.py",
+    "scripts/captions_and_crossrefs.py",
+    "scripts/comments_add.py",
+    "scripts/comments_apply_patch.py",
+    "scripts/comments_extract.py",
+    "scripts/comments_strip.py",
+    "scripts/content_controls.py",
+    "scripts/docx_ooxml_patch.py",
+    "scripts/docx_table_to_csv.py",
+    "scripts/fields_materialize.py"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "d351bbfe01bfbba0ee1bef7b6dc628039fd9c97a9ab6deff6f600d2a795eee47",
+   "names": [
+    "docx"
+   ],
+   "files_not_fully_read": 61,
+   "sample": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "scripts/__init__.py",
+    "scripts/accept_changes.py",
+    "scripts/comment.py",
+    "scripts/merge_runs.py",
+    "scripts/office/helpers/__init__.py",
+    "scripts/office/helpers/pptx_chart.py",
+    "scripts/office/helpers/pptx_slide.py",
+    "scripts/office/helpers/pptx_theme.py",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "553101bd77f16f145e9080706d9ce3d3c7c667ed6df97bc4c1e3f7f995c07b32",
+   "names": [
+    "embedded-captions"
+   ],
+   "files_not_fully_read": 92,
+   "sample": [
+    "CATALOG.md",
+    "assets/fonts/char-widths.json",
+    "assets/strokefonts/HersheyScript1.svg",
+    "assets/strokefonts/HersheyScriptMed.svg",
+    "dna/README.md",
+    "dna/chrome.json",
+    "dna/cream.json",
+    "dna/documentary.json",
+    "dna/editorial.json",
+    "dna/glitch.json",
+    "dna/ink.json",
+    "dna/keynote.json",
+    "dna/loud.json",
+    "dna/neon.json",
+    "dna/velocity.json",
+    "modes/cinematic/README.md",
+    "modes/cinematic/_archive/champion/spec.md",
+    "modes/cinematic/_archive/champion/template.html",
+    "modes/cinematic/_archive/memory-wall/spec.md",
+    "modes/cinematic/_archive/memory-wall/template.html",
+    "modes/cinematic/_archive/portrait-header/spec.md",
+    "modes/cinematic/_archive/portrait-header/template.html",
+    "modes/cinematic/cinematic-cream/spec.md",
+    "modes/cinematic/cinematic-cream/template.html",
+    "modes/cinematic/engine.html"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c8e57b32fda0d35983c74f5cde1ae5f3a62a789a08bd08c8e1d15c6037902ef5",
+   "names": [
+    "faceless-explainer"
+   ],
+   "files_not_fully_read": 23,
+   "sample": [
+    "references/cut-catalog.md",
+    "references/motion-language.md",
+    "references/story-design.md",
+    "references/visual-design.md",
+    "scripts/assemble-index.mjs",
+    "scripts/assemble-index.test.mjs",
+    "scripts/audio.mjs",
+    "scripts/audio.test.mjs",
+    "scripts/build-frame.mjs",
+    "scripts/captions.mjs",
+    "scripts/captions.test.mjs",
+    "scripts/frame-packets.mjs",
+    "scripts/frame-packets.test.mjs",
+    "scripts/lib/assets.mjs",
+    "scripts/lib/dimensions.mjs",
+    "scripts/lib/pad-frame-duration.mjs",
+    "scripts/lib/storyboard.mjs",
+    "scripts/lib/tokens.mjs",
+    "scripts/lib/transition-registry.mjs",
+    "scripts/lib/transitions.json",
+    "scripts/transitions.mjs",
+    "scripts/transitions.test.mjs",
+    "sub-agents/frame-worker.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "35d2cc77762ba39ecc8a525c9ca1f1a66aab8fee7fbbec7d21fc053400b70dba",
+   "names": [
+    "hyperframes-animation"
+   ],
+   "files_not_fully_read": 119,
+   "sample": [
+    "adapters/animate-text.md",
+    "adapters/animejs.md",
+    "adapters/css-animations.md",
+    "adapters/gsap-easing-and-stagger.md",
+    "adapters/gsap-timeline-and-labels.md",
+    "adapters/gsap-transforms-and-perf.md",
+    "adapters/gsap.md",
+    "adapters/html-in-canvas-patterns.md",
+    "adapters/lottie.md",
+    "adapters/three.md",
+    "adapters/typegpu.md",
+    "adapters/waapi.md",
+    "blueprints-index.md",
+    "blueprints/agent-progress-theater.md",
+    "blueprints/camera-journey.md",
+    "blueprints/comparison-split.md",
+    "blueprints/constellation-hub.md",
+    "blueprints/cta-morph-press.md",
+    "blueprints/cursor-ui-demo.md",
+    "blueprints/dataviz-countup.md",
+    "blueprints/device-surface-showcase.md",
+    "blueprints/fixed-anchor-cycle.md",
+    "blueprints/grid-card-assemble.md",
+    "blueprints/kinetic-type-beats.md",
+    "blueprints/logo-assemble-lockup.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "52f41c05f4f37378fa3cc519a3dd8bc12e6a411eefde4edbb7372ea8aa235ac8",
+   "names": [
+    "hyperframes-animation"
+   ],
+   "files_not_fully_read": 119,
+   "sample": [
+    "adapters/animate-text.md",
+    "adapters/animejs.md",
+    "adapters/css-animations.md",
+    "adapters/gsap-easing-and-stagger.md",
+    "adapters/gsap-timeline-and-labels.md",
+    "adapters/gsap-transforms-and-perf.md",
+    "adapters/gsap.md",
+    "adapters/html-in-canvas-patterns.md",
+    "adapters/lottie.md",
+    "adapters/three.md",
+    "adapters/typegpu.md",
+    "adapters/waapi.md",
+    "blueprints-index.md",
+    "blueprints/agent-progress-theater.md",
+    "blueprints/camera-journey.md",
+    "blueprints/comparison-split.md",
+    "blueprints/constellation-hub.md",
+    "blueprints/cta-morph-press.md",
+    "blueprints/cursor-ui-demo.md",
+    "blueprints/dataviz-countup.md",
+    "blueprints/device-surface-showcase.md",
+    "blueprints/fixed-anchor-cycle.md",
+    "blueprints/grid-card-assemble.md",
+    "blueprints/kinetic-type-beats.md",
+    "blueprints/logo-assemble-lockup.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "72de3f297c9a3a137f13843fe67f6cc4dd76244f4c9787933d69efb5c367cf02",
+   "names": [
+    "hyperframes-creative"
+   ],
+   "files_not_fully_read": 71,
+   "sample": [
+    "frame-presets/biennale-yellow/FRAME.md",
+    "frame-presets/biennale-yellow/caption-skin.html",
+    "frame-presets/biennale-yellow/frame-showcase.html",
+    "frame-presets/blockframe/FRAME.md",
+    "frame-presets/blockframe/caption-skin.html",
+    "frame-presets/blockframe/frame-showcase.html",
+    "frame-presets/blue-professional/FRAME.md",
+    "frame-presets/blue-professional/caption-skin.html",
+    "frame-presets/blue-professional/frame-showcase.html",
+    "frame-presets/bold-poster/FRAME.md",
+    "frame-presets/bold-poster/caption-skin.html",
+    "frame-presets/bold-poster/frame-showcase.html",
+    "frame-presets/broadside/FRAME.md",
+    "frame-presets/broadside/caption-skin.html",
+    "frame-presets/broadside/frame-showcase.html",
+    "frame-presets/capsule/FRAME.md",
+    "frame-presets/capsule/caption-skin.html",
+    "frame-presets/capsule/frame-showcase.html",
+    "frame-presets/cartesian/FRAME.md",
+    "frame-presets/cartesian/caption-skin.html",
+    "frame-presets/cartesian/frame-showcase.html",
+    "frame-presets/cobalt-grid/FRAME.md",
+    "frame-presets/cobalt-grid/caption-skin.html",
+    "frame-presets/cobalt-grid/frame-showcase.html",
+    "frame-presets/code-editorial/FRAME.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "dfac9a5b177c2a50988f7a1eddf110ef31a01f90dcdf2f3af3554fb4372f1a92",
+   "names": [
+    "hyperframes-creative"
+   ],
+   "files_not_fully_read": 71,
+   "sample": [
+    "frame-presets/biennale-yellow/FRAME.md",
+    "frame-presets/biennale-yellow/caption-skin.html",
+    "frame-presets/biennale-yellow/frame-showcase.html",
+    "frame-presets/blockframe/FRAME.md",
+    "frame-presets/blockframe/caption-skin.html",
+    "frame-presets/blockframe/frame-showcase.html",
+    "frame-presets/blue-professional/FRAME.md",
+    "frame-presets/blue-professional/caption-skin.html",
+    "frame-presets/blue-professional/frame-showcase.html",
+    "frame-presets/bold-poster/FRAME.md",
+    "frame-presets/bold-poster/caption-skin.html",
+    "frame-presets/bold-poster/frame-showcase.html",
+    "frame-presets/broadside/FRAME.md",
+    "frame-presets/broadside/caption-skin.html",
+    "frame-presets/broadside/frame-showcase.html",
+    "frame-presets/capsule/FRAME.md",
+    "frame-presets/capsule/caption-skin.html",
+    "frame-presets/capsule/frame-showcase.html",
+    "frame-presets/cartesian/FRAME.md",
+    "frame-presets/cartesian/caption-skin.html",
+    "frame-presets/cartesian/frame-showcase.html",
+    "frame-presets/cobalt-grid/FRAME.md",
+    "frame-presets/cobalt-grid/caption-skin.html",
+    "frame-presets/cobalt-grid/frame-showcase.html",
+    "frame-presets/code-editorial/FRAME.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "e27465f2b192201fe9b90fbf8122fe68e9c2ce78210e56aa01c42a4053b5a50e",
+   "names": [
+    "imagegen"
+   ],
+   "files_not_fully_read": 9,
+   "sample": [
+    "LICENSE.txt",
+    "agents/openai.yaml",
+    "assets/imagegen-small.svg",
+    "references/cli.md",
+    "references/image-api.md",
+    "references/prompting.md",
+    "references/sample-prompts.md",
+    "scripts/image_gen.py",
+    "scripts/remove_chroma_key.py"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "2c076dbc72de2784718db11468e1a9fb2a71287a7c8eae29f8f7b68dfb3649d5",
+   "names": [
+    "impeccable"
+   ],
+   "files_not_fully_read": 46,
+   "sample": [
+    "reference/adapt.md",
+    "reference/adapt.native.md",
+    "reference/android.md",
+    "reference/animate.md",
+    "reference/audit.md",
+    "reference/audit.native.md",
+    "reference/bolder.md",
+    "reference/clarify.md",
+    "reference/colorize.md",
+    "reference/craft-floor.md",
+    "reference/craft.md",
+    "reference/critique.md",
+    "reference/degraded/asset-producer.md",
+    "reference/degraded/documenter.md",
+    "reference/degraded/finish-reviewer.md",
+    "reference/degraded/manual-edit-applier.md",
+    "reference/delight.md",
+    "reference/distill.md",
+    "reference/doctor.md",
+    "reference/document.md",
+    "reference/extract.md",
+    "reference/harden.md",
+    "reference/init.md",
+    "reference/ios.md",
+    "reference/layout.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "40a46b6bc1fa2e4663b4aa0f75a51b50f7739c2ca51c48b999a4d745ac37f3e1",
+   "names": [
+    "impeccable"
+   ],
+   "files_not_fully_read": 47,
+   "sample": [
+    "agents/openai.yaml",
+    "reference/adapt.md",
+    "reference/adapt.native.md",
+    "reference/android.md",
+    "reference/animate.md",
+    "reference/audit.md",
+    "reference/audit.native.md",
+    "reference/bolder.md",
+    "reference/clarify.md",
+    "reference/colorize.md",
+    "reference/craft-floor.md",
+    "reference/craft.md",
+    "reference/critique.md",
+    "reference/degraded/asset-producer.md",
+    "reference/degraded/documenter.md",
+    "reference/degraded/finish-reviewer.md",
+    "reference/degraded/manual-edit-applier.md",
+    "reference/delight.md",
+    "reference/distill.md",
+    "reference/doctor.md",
+    "reference/document.md",
+    "reference/extract.md",
+    "reference/harden.md",
+    "reference/init.md",
+    "reference/ios.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "086859be5f81cfcd7c7fbb343d624496ab6dfd9da0dd315520866951affcffe2",
+   "names": [
+    "media-use"
+   ],
+   "files_not_fully_read": 129,
+   "sample": [
+    "SKILL.md",
+    "audio/assets/sfx/CREDITS.md",
+    "audio/assets/sfx/manifest.json",
+    "audio/references/bgm.md",
+    "audio/references/captions/authoring.md",
+    "audio/references/captions/motion.md",
+    "audio/references/captions/transcript-handling.md",
+    "audio/references/remove-background.md",
+    "audio/references/requirements.md",
+    "audio/references/sfx.md",
+    "audio/references/transcribe.md",
+    "audio/references/tts-to-captions.md",
+    "audio/references/tts.md",
+    "audio/scripts/audio.mjs",
+    "audio/scripts/audio.test.mjs",
+    "audio/scripts/heygen-tts.mjs",
+    "audio/scripts/lib/audio-meta.mjs",
+    "audio/scripts/lib/audio-meta.test.mjs",
+    "audio/scripts/lib/bgm.mjs",
+    "audio/scripts/lib/bgm.test.mjs",
+    "audio/scripts/lib/concurrency.mjs",
+    "audio/scripts/lib/concurrency.test.mjs",
+    "audio/scripts/lib/heygen.test.mjs",
+    "audio/scripts/lib/python.mjs",
+    "audio/scripts/lib/python.test.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "d98f7cb7b07326ac4fc6535b05128fb4dc6ef868d55f0dcae5ba48b44ed27cf2",
+   "names": [
+    "media-use"
+   ],
+   "files_not_fully_read": 125,
+   "sample": [
+    "SKILL.md",
+    "audio/assets/sfx/CREDITS.md",
+    "audio/assets/sfx/manifest.json",
+    "audio/references/bgm.md",
+    "audio/references/captions/authoring.md",
+    "audio/references/captions/motion.md",
+    "audio/references/captions/transcript-handling.md",
+    "audio/references/remove-background.md",
+    "audio/references/requirements.md",
+    "audio/references/sfx.md",
+    "audio/references/transcribe.md",
+    "audio/references/tts-to-captions.md",
+    "audio/references/tts.md",
+    "audio/scripts/audio.mjs",
+    "audio/scripts/audio.test.mjs",
+    "audio/scripts/heygen-tts.mjs",
+    "audio/scripts/lib/bgm.mjs",
+    "audio/scripts/lib/bgm.test.mjs",
+    "audio/scripts/lib/concurrency.mjs",
+    "audio/scripts/lib/concurrency.test.mjs",
+    "audio/scripts/lib/heygen.test.mjs",
+    "audio/scripts/lib/python.mjs",
+    "audio/scripts/lib/python.test.mjs",
+    "audio/scripts/lib/sfx.mjs",
+    "audio/scripts/lib/sfx.test.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c3c9064f37166cf97f1b9ed8564614818ad627de256444ef6e636b576b9c5f35",
+   "names": [
+    "music-to-video"
+   ],
+   "files_not_fully_read": 64,
+   "sample": [
+    "references/frame-skeleton.md",
+    "references/montage.md",
+    "references/motion-primitive-catalog.md",
+    "references/motion-primitives/3d-card-flip/index.html",
+    "references/motion-primitives/assets/gsap.min.js",
+    "references/motion-primitives/bg-flow-field/index.html",
+    "references/motion-primitives/binary-decrypt/index.html",
+    "references/motion-primitives/blur-resolve/index.html",
+    "references/motion-primitives/braam-punch/index.html",
+    "references/motion-primitives/chromatic-split/index.html",
+    "references/motion-primitives/chrome-sweep/index.html",
+    "references/motion-primitives/counting-punch/index.html",
+    "references/motion-primitives/crash-zoom-in/index.html",
+    "references/motion-primitives/datamosh-smear/index.html",
+    "references/motion-primitives/directional-fill/index.html",
+    "references/motion-primitives/dolly-zoom/index.html",
+    "references/motion-primitives/electric-arc/index.html",
+    "references/motion-primitives/flash-cut/index.html",
+    "references/motion-primitives/gooey-metaball/index.html",
+    "references/motion-primitives/hard-cut/index.html",
+    "references/motion-primitives/hypercut-whip/index.html",
+    "references/motion-primitives/iris-open/index.html",
+    "references/motion-primitives/kinetic-letter-in/index.html",
+    "references/motion-primitives/liquid-morph/index.html",
+    "references/motion-primitives/mask-reveal/index.html"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "4c0807ecbc74997140853a02064b5f6d76166d6d8f4acb42b13b4124ef03eeab",
+   "names": [
+    "pptx"
+   ],
+   "files_not_fully_read": 56,
+   "sample": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "scripts/__init__.py",
+    "scripts/add_slide.py",
+    "scripts/clean.py",
+    "scripts/office/helpers/__init__.py",
+    "scripts/office/helpers/pptx_chart.py",
+    "scripts/office/helpers/pptx_slide.py",
+    "scripts/office/helpers/pptx_theme.py",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "cfe2ba681867a23bef413305518da3dc2301546119ffa5da5747b8c774ff4857",
+   "names": [
+    "pr-to-video"
+   ],
+   "files_not_fully_read": 28,
+   "sample": [
+    "references/code-vocabulary.md",
+    "references/cut-catalog.md",
+    "references/motion-language.md",
+    "references/story-design.md",
+    "references/visual-design.md",
+    "scripts/assemble-index.mjs",
+    "scripts/assemble-index.test.mjs",
+    "scripts/audio.mjs",
+    "scripts/build-frame.mjs",
+    "scripts/captions.mjs",
+    "scripts/captions.test.mjs",
+    "scripts/fetch-people-avatars.mjs",
+    "scripts/fetch-pr.mjs",
+    "scripts/frame-contract.test.mjs",
+    "scripts/frame-packets.mjs",
+    "scripts/ingest.mjs",
+    "scripts/lib/assets.mjs",
+    "scripts/lib/dimensions.mjs",
+    "scripts/lib/frame-contract.mjs",
+    "scripts/lib/pad-frame-duration.mjs",
+    "scripts/lib/storyboard.mjs",
+    "scripts/lib/tokens.mjs",
+    "scripts/lib/transition-registry.mjs",
+    "scripts/lib/transitions.json",
+    "scripts/project-dir.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "f314adc72d3083418e0c2cd5ab34dfa953138f1b65fa8d9af4f14bcd56e481e3",
+   "names": [
+    "product-launch-video"
+   ],
+   "files_not_fully_read": 27,
+   "sample": [
+    "references/cut-catalog.md",
+    "references/motion-language.md",
+    "references/story-design.md",
+    "references/visual-design.md",
+    "scripts/assemble-index.mjs",
+    "scripts/assemble-index.test.mjs",
+    "scripts/audio.mjs",
+    "scripts/audio.test.mjs",
+    "scripts/build-frame.mjs",
+    "scripts/captions.mjs",
+    "scripts/captions.test.mjs",
+    "scripts/capture-skill-guardrails.test.mjs",
+    "scripts/frame-packets.mjs",
+    "scripts/frame-packets.test.mjs",
+    "scripts/lib/assets.mjs",
+    "scripts/lib/dimensions.mjs",
+    "scripts/lib/pad-frame-duration.mjs",
+    "scripts/lib/pad-frame-duration.test.mjs",
+    "scripts/lib/storyboard.mjs",
+    "scripts/lib/tokens.mjs",
+    "scripts/lib/tokens.test.mjs",
+    "scripts/lib/transition-registry.mjs",
+    "scripts/lib/transitions.json",
+    "scripts/media-contract.test.mjs",
+    "scripts/stage-assets.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "63bc30fd9cdd74dbc89c00e6ce5673efb6f16d5027523abae35867acf25981aa",
+   "names": [
+    "seo"
+   ],
+   "files_not_fully_read": 56,
+   "sample": [
+    "LICENSE.txt",
+    "extensions/banana/references/cost-tracking.md",
+    "extensions/banana/references/gemini-models.md",
+    "extensions/banana/references/mcp-tools.md",
+    "extensions/banana/references/post-processing.md",
+    "extensions/banana/references/presets.md",
+    "extensions/banana/references/prompt-engineering.md",
+    "extensions/banana/references/seo-image-presets.md",
+    "extensions/banana/scripts/batch.py",
+    "extensions/banana/scripts/cost_tracker.py",
+    "extensions/banana/scripts/edit.py",
+    "extensions/banana/scripts/generate.py",
+    "extensions/banana/scripts/presets.py",
+    "extensions/banana/scripts/setup_mcp.py",
+    "extensions/banana/scripts/validate_setup.py",
+    "pdf/google-seo-reference.md",
+    "references/backlink-quality.md",
+    "references/cwv-thresholds.md",
+    "references/eeat-framework.md",
+    "references/free-backlink-sources.md",
+    "references/local-schema-types.md",
+    "references/local-seo-signals.md",
+    "references/maps-api-endpoints.md",
+    "references/maps-free-apis.md",
+    "references/maps-gbp-checklist.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "ffdb4e02856830e9f5d75d974f8eaed38dce61c1a93c5ce9b8c3d342773ba14b",
+   "names": [
+    "sites-building"
+   ],
+   "files_not_fully_read": 111,
+   "sample": [
+    "SKILL.md",
+    "references/authentication.md",
+    "references/library-selection.md",
+    "references/persistence-and-storage.md",
+    "references/preview/managed-linux.md",
+    "references/preview/portable.md",
+    "references/project-setup/managed-linux.md",
+    "references/project-setup/portable.md",
+    "references/registration.md",
+    "references/sqlite.md",
+    "references/starter-capabilities.md",
+    "references/webmcp.md",
+    "templates/vinext-starter/.openai/hosting.json",
+    "templates/vinext-starter/README.md",
+    "templates/vinext-starter/app/globals.css",
+    "templates/vinext-starter/app/layout.tsx",
+    "templates/vinext-starter/app/page.tsx",
+    "templates/vinext-starter/cloudflare-env.d.ts",
+    "templates/vinext-starter/components.json",
+    "templates/vinext-starter/components/ui/accordion.tsx",
+    "templates/vinext-starter/components/ui/alert-dialog.tsx",
+    "templates/vinext-starter/components/ui/alert.tsx",
+    "templates/vinext-starter/components/ui/aspect-ratio.tsx",
+    "templates/vinext-starter/components/ui/attachment.tsx",
+    "templates/vinext-starter/components/ui/avatar.tsx"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "50d502c031295d1784dbefcf33c342ea681321eec9f6ef948bdb13a4a9cd798d",
+   "names": [
+    "skill-creator"
+   ],
+   "files_not_fully_read": 16,
+   "sample": [
+    "LICENSE.txt",
+    "agents/analyzer.md",
+    "agents/comparator.md",
+    "agents/grader.md",
+    "eval-viewer/generate_review.py",
+    "eval-viewer/viewer.html",
+    "references/schemas.md",
+    "scripts/__init__.py",
+    "scripts/aggregate_benchmark.py",
+    "scripts/generate_report.py",
+    "scripts/improve_description.py",
+    "scripts/package_skill.py",
+    "scripts/quick_validate.py",
+    "scripts/run_eval.py",
+    "scripts/run_loop.py",
+    "scripts/utils.py"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "961813a757993697c95eda80c42cf2de90227775bc7681da31c10491aa260b06",
+   "names": [
+    "skill-creator"
+   ],
+   "files_not_fully_read": 4,
+   "sample": [
+    "agents/openai.yaml",
+    "assets/skill-creator-small.svg",
+    "license.txt",
+    "references/openai_yaml.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "d9b54ccd300a2d05c175ee07be46e3c7b53ff031577e8702ddcf12a65931a9e4",
+   "names": [
+    "motion-graphics"
+   ],
+   "files_not_fully_read": 21,
+   "sample": [
+    "agents/builder.md",
+    "agents/director.md",
+    "agents/finalize.md",
+    "catalog-map.md",
+    "categories/asset-fusion/module.md",
+    "categories/charts/module.md",
+    "categories/kinetic-type/module.md",
+    "categories/logo-reveal/module.md",
+    "categories/lower-thirds/module.md",
+    "categories/maps/bake-basemap.mjs",
+    "categories/maps/module.md",
+    "categories/news/module.md",
+    "categories/stat/module.md",
+    "categories/tweet/module.md",
+    "categories/webpage/module.md",
+    "grounding/PROTOCOL.md",
+    "phases/source/guide.md",
+    "references/builder-contract.md",
+    "references/motion-vocabulary.md",
+    "references/shot-plan-ir.md",
+    "samples/asset-fusion/_ref-circle-highlight.html"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "a439d7e7b106a51db49fcc2423bd707492632ea2fee402d0539836ab213b9b12",
+   "names": [
+    "hyperframes-cli"
+   ],
+   "files_not_fully_read": 10,
+   "sample": [
+    "references/beats.md",
+    "references/cloud.md",
+    "references/cloudrun.md",
+    "references/compare-and-batch.md",
+    "references/doctor-browser.md",
+    "references/init-and-scaffold.md",
+    "references/lambda.md",
+    "references/lint-validate-inspect.md",
+    "references/preview-render.md",
+    "references/upgrade-info-misc.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "ed6cdebae152a485d872b86c8118f0f71843107b88f377e6097d2d53a5f440d3",
+   "names": [
+    "hyperframes-cli"
+   ],
+   "files_not_fully_read": 10,
+   "sample": [
+    "references/beats.md",
+    "references/cloud.md",
+    "references/cloudrun.md",
+    "references/compare-and-batch.md",
+    "references/doctor-browser.md",
+    "references/init-and-scaffold.md",
+    "references/lambda.md",
+    "references/lint-validate-inspect.md",
+    "references/preview-render.md",
+    "references/upgrade-info-misc.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "b08cbf3a6afb87ff1e32cfc144a1acf976f52671ce9d621803e23ce4dc499b16",
+   "names": [
+    "xlsx"
+   ],
+   "files_not_fully_read": 53,
+   "sample": [
+    "LICENSE.txt",
+    "SKILL.md",
+    "scripts/office/helpers/__init__.py",
+    "scripts/office/helpers/pptx_chart.py",
+    "scripts/office/helpers/pptx_slide.py",
+    "scripts/office/helpers/pptx_theme.py",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/pml.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-math.xsd",
+    "scripts/office/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "3c22157178ba9fadb9cc824c2656913398f0d8d3519896a87cf652c6284c0194",
+   "names": [
+    "remotion-to-hyperframes"
+   ],
+   "files_not_fully_read": 62,
+   "sample": [
+    "SKILL.md",
+    "assets/test-corpus/run.sh",
+    "assets/test-corpus/tier-1-title-card/README.md",
+    "assets/test-corpus/tier-1-title-card/expected.json",
+    "assets/test-corpus/tier-1-title-card/hf-src/index.html",
+    "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+    "assets/test-corpus/tier-1-title-card/remotion-src/remotion.config.ts",
+    "assets/test-corpus/tier-1-title-card/remotion-src/src/Root.tsx",
+    "assets/test-corpus/tier-1-title-card/remotion-src/src/TitleCard.tsx",
+    "assets/test-corpus/tier-1-title-card/remotion-src/src/index.ts",
+    "assets/test-corpus/tier-1-title-card/remotion-src/tsconfig.json",
+    "assets/test-corpus/tier-2-multi-scene/README.md",
+    "assets/test-corpus/tier-2-multi-scene/expected.json",
+    "assets/test-corpus/tier-2-multi-scene/hf-src/index.html",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/remotion.config.ts",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/src/MultiScene.tsx",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/src/Root.tsx",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/src/index.ts",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/tsconfig.json",
+    "assets/test-corpus/tier-2-multi-scene/setup.sh",
+    "assets/test-corpus/tier-3-data-driven/README.md",
+    "assets/test-corpus/tier-3-data-driven/expected.json",
+    "assets/test-corpus/tier-3-data-driven/hf-src/index.html",
+    "assets/test-corpus/tier-3-data-driven/remotion-src/package.json"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "673e7bf03075e37fab08cb619088e471b6dd3cbd1589819a0bfaafc10cdd546d",
+   "names": [
+    "remotion-to-hyperframes"
+   ],
+   "files_not_fully_read": 63,
+   "sample": [
+    "assets/test-corpus/run.sh",
+    "assets/test-corpus/tier-1-title-card/README.md",
+    "assets/test-corpus/tier-1-title-card/expected.json",
+    "assets/test-corpus/tier-1-title-card/hf-src/index.html",
+    "assets/test-corpus/tier-1-title-card/remotion-src/package.json",
+    "assets/test-corpus/tier-1-title-card/remotion-src/remotion.config.ts",
+    "assets/test-corpus/tier-1-title-card/remotion-src/src/Root.tsx",
+    "assets/test-corpus/tier-1-title-card/remotion-src/src/TitleCard.tsx",
+    "assets/test-corpus/tier-1-title-card/remotion-src/src/index.ts",
+    "assets/test-corpus/tier-1-title-card/remotion-src/tsconfig.json",
+    "assets/test-corpus/tier-2-multi-scene/README.md",
+    "assets/test-corpus/tier-2-multi-scene/expected.json",
+    "assets/test-corpus/tier-2-multi-scene/hf-src/index.html",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/package.json",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/remotion.config.ts",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/src/MultiScene.tsx",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/src/Root.tsx",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/src/index.ts",
+    "assets/test-corpus/tier-2-multi-scene/remotion-src/tsconfig.json",
+    "assets/test-corpus/tier-2-multi-scene/setup.sh",
+    "assets/test-corpus/tier-3-data-driven/README.md",
+    "assets/test-corpus/tier-3-data-driven/expected.json",
+    "assets/test-corpus/tier-3-data-driven/hf-src/index.html",
+    "assets/test-corpus/tier-3-data-driven/remotion-src/package.json",
+    "assets/test-corpus/tier-3-data-driven/remotion-src/remotion.config.ts"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "0fee271cc24d09859966d4cfc5877f49b85ba17fb63f6ab5551d948fd1e835f1",
+   "names": [
+    "create-cowork-plugin"
+   ],
+   "files_not_fully_read": 2,
+   "sample": [
+    "references/component-schemas.md",
+    "references/example-plugins.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "8f4c5c9f51371351fe9478317328da77909b813a48816af59027f01623804966",
+   "names": [
+    "plugin-creator"
+   ],
+   "files_not_fully_read": 4,
+   "sample": [
+    "agents/openai.yaml",
+    "assets/plugin-creator-small.svg",
+    "references/plugin-json-spec.md",
+    "scripts/validate_plugin.py"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "79accbf4da5da16657ca2f6e06751f5e5a5f36f91f61e5144682343ccf208312",
+   "names": [
+    "hyperframes-core"
+   ],
+   "files_not_fully_read": 19,
+   "sample": [
+    "references/brief-contract.md",
+    "references/brief-format.md",
+    "references/composition-patterns.md",
+    "references/creator-editing-recipes.md",
+    "references/data-attributes.md",
+    "references/determinism-rules.md",
+    "references/frame-worker-core.md",
+    "references/full-screen-motion.md",
+    "references/minimal-composition.md",
+    "references/production-loop.md",
+    "references/review-loop.md",
+    "references/script-format.md",
+    "references/storyboard-format.md",
+    "references/sub-compositions.md",
+    "references/subagent-dispatch.md",
+    "references/tailwind.md",
+    "references/tracks-and-clips.md",
+    "references/variables-and-media.md",
+    "scripts/lib/frame-packets-core.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "02ff1414aad67e63464ea446159b980da75afc59b25ac17c6984a34966fbd824",
+   "names": [
+    "remotion-best-practices"
+   ],
+   "files_not_fully_read": 34,
+   "sample": [
+    "SKILL.md",
+    "rules/3d.md",
+    "rules/assets/charts-bar-chart.tsx",
+    "rules/assets/text-animations-typewriter.tsx",
+    "rules/assets/text-animations-word-highlight.tsx",
+    "rules/audio.md",
+    "rules/display-captions.md",
+    "rules/ffmpeg.md",
+    "rules/get-audio-duration.md",
+    "rules/get-video-dimensions.md",
+    "rules/get-video-duration.md",
+    "rules/gifs.md",
+    "rules/google-fonts.md",
+    "rules/html-in-canvas.md",
+    "rules/import-srt-captions.md",
+    "rules/light-leaks.md",
+    "rules/local-fonts.md",
+    "rules/lottie.md",
+    "rules/maplibre.md",
+    "rules/measuring-dom-nodes.md",
+    "rules/measuring-text.md",
+    "rules/parameters.md",
+    "rules/sequencing.md",
+    "rules/sfx.md",
+    "rules/silence-detection.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c9c974271603d1dde3619caf22919822e104694bfa3699218d24cc7f17d04710",
+   "names": [
+    "hyperframes-audio"
+   ],
+   "files_not_fully_read": 6,
+   "sample": [
+    "references/attributes.md",
+    "references/diagnosis.md",
+    "references/fx-registry.md",
+    "references/presets.md",
+    "scripts/carve.mjs",
+    "scripts/carve.test.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "0952da6cdbcd2e7ad7894fb480d1d7c3410bcd10407d55588b263ae249d75c5d",
+   "names": [
+    "motion-doctrine"
+   ],
+   "files_not_fully_read": 3,
+   "sample": [
+    "references/seam-gate.md",
+    "scripts/seam-gate.mjs",
+    "scripts/seam-stamp.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "5e13536b89a42587997ce61a3d045149c91d45effe1b6c08e78bf761ef28655f",
+   "names": [
+    "talking-head-recut"
+   ],
+   "files_not_fully_read": 22,
+   "sample": [
+    "NOTICE.md",
+    "SKILL.md",
+    "assets/vendor/gsap.min.js",
+    "media-contract.test.mjs",
+    "references/DESIGN_INDEX.md",
+    "references/frames/clean.html",
+    "references/frames/hairline.html",
+    "references/frames/polaroid.html",
+    "references/layouts/overlay.html",
+    "references/layouts/pip.html",
+    "references/layouts/split.html",
+    "references/layouts/stack.html",
+    "references/styles/academic.html",
+    "references/styles/audit.html",
+    "references/styles/editorial.html",
+    "references/styles/geom.html",
+    "references/styles/minimal.html",
+    "references/styles/spotlight.html",
+    "references/styles/swiss.html",
+    "references/styles/terminal.html",
+    "references/styles/whiteboard.html",
+    "references/styles/xhs.html"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "f6d981ad2343c70afa8846509c1effd75823a2c5870d02a349ee4032411febe2",
+   "names": [
+    "hyperframes-core"
+   ],
+   "files_not_fully_read": 19,
+   "sample": [
+    "references/brief-contract.md",
+    "references/brief-format.md",
+    "references/composition-patterns.md",
+    "references/creator-editing-recipes.md",
+    "references/data-attributes.md",
+    "references/determinism-rules.md",
+    "references/frame-worker-core.md",
+    "references/full-screen-motion.md",
+    "references/minimal-composition.md",
+    "references/production-loop.md",
+    "references/review-loop.md",
+    "references/script-format.md",
+    "references/storyboard-format.md",
+    "references/sub-compositions.md",
+    "references/subagent-dispatch.md",
+    "references/tailwind.md",
+    "references/tracks-and-clips.md",
+    "references/variables-and-media.md",
+    "scripts/lib/frame-packets-core.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "5b039b2ddf0d245115338575664c6f4212ec7080880228b6c8b62b6dec5b9b3d",
+   "names": [
+    "hyperframes"
+   ],
+   "files_not_fully_read": 15,
+   "sample": [
+    "references/capability-menu.md",
+    "references/intent-interview.md",
+    "references/pitch-round.md",
+    "references/route-briefs.md",
+    "references/routes/embedded-captions.md",
+    "references/routes/faceless-explainer.md",
+    "references/routes/general-video.md",
+    "references/routes/motion-graphics.md",
+    "references/routes/music-to-video.md",
+    "references/routes/pr-to-video.md",
+    "references/routes/product-launch-video.md",
+    "references/routes/remotion-to-hyperframes.md",
+    "references/routes/slideshow.md",
+    "references/routes/talking-head-recut.md",
+    "references/workflow-catalog.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "6934b94a090aa786134cce35bf39d18c59f4caf52e44aad06a48bbd2422e9611",
+   "names": [
+    "hyperframes"
+   ],
+   "files_not_fully_read": 15,
+   "sample": [
+    "references/capability-menu.md",
+    "references/intent-interview.md",
+    "references/pitch-round.md",
+    "references/route-briefs.md",
+    "references/routes/embedded-captions.md",
+    "references/routes/faceless-explainer.md",
+    "references/routes/general-video.md",
+    "references/routes/motion-graphics.md",
+    "references/routes/music-to-video.md",
+    "references/routes/pr-to-video.md",
+    "references/routes/product-launch-video.md",
+    "references/routes/remotion-to-hyperframes.md",
+    "references/routes/slideshow.md",
+    "references/routes/talking-head-recut.md",
+    "references/workflow-catalog.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "eb4bafa29d3b3e71589081993dfb12ba277d670bae07b99ac667cd6a695da56b",
+   "names": [
+    "seo-image-gen"
+   ],
+   "files_not_fully_read": 7,
+   "sample": [
+    "LICENSE.txt",
+    "references/cost-tracking.md",
+    "references/gemini-models.md",
+    "references/post-processing.md",
+    "references/presets.md",
+    "references/prompt-engineering.md",
+    "references/seo-image-presets.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "30d4c0be3b7c771f75238e670ea6b86800586378b1b7d9190abad42d08b8299f",
+   "names": [
+    "slideshow"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "references/standalone-harness.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "9caac09be5bc623a06881331608ce8593ead599e2a27d63c472a45accf0693fd",
+   "names": [
+    "seo-cluster"
+   ],
+   "files_not_fully_read": 3,
+   "sample": [
+    "references/execution-workflow.md",
+    "references/hub-spoke-architecture.md",
+    "references/serp-overlap-methodology.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "92186ae18b0b3f23a2931df993cfc96bc20acfeadb931dab521253b6ef0e0047",
+   "names": [
+    "hyperframes-registry"
+   ],
+   "files_not_fully_read": 11,
+   "sample": [
+    "examples/add-block.md",
+    "examples/add-component.md",
+    "references/component-quality-bar.md",
+    "references/contributing.md",
+    "references/demo-html-pattern.md",
+    "references/discovery.md",
+    "references/install-locations.md",
+    "references/placeholder-material.md",
+    "references/templates.md",
+    "references/wiring-blocks.md",
+    "references/wiring-components.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "d13d741b97b1bff83acca309e9099b37003ea81c59de69e7b31d504adab64298",
+   "names": [
+    "hyperframes-registry"
+   ],
+   "files_not_fully_read": 11,
+   "sample": [
+    "examples/add-block.md",
+    "examples/add-component.md",
+    "references/component-quality-bar.md",
+    "references/contributing.md",
+    "references/demo-html-pattern.md",
+    "references/discovery.md",
+    "references/install-locations.md",
+    "references/placeholder-material.md",
+    "references/templates.md",
+    "references/wiring-blocks.md",
+    "references/wiring-components.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "a64d3df49f24b2ab76944d83c2b250c5de1f3bca96c1eee5655c6d06c1db57ee",
+   "names": [
+    "hyperframes"
+   ],
+   "files_not_fully_read": 45,
+   "sample": [
+    "data-in-motion.md",
+    "house-style.md",
+    "palettes/bold-energetic.md",
+    "palettes/clean-corporate.md",
+    "palettes/dark-premium.md",
+    "palettes/jewel-rich.md",
+    "palettes/monochrome.md",
+    "palettes/nature-earth.md",
+    "palettes/neon-electric.md",
+    "palettes/pastel-soft.md",
+    "palettes/warm-editorial.md",
+    "patterns.md",
+    "references/audio-reactive.md",
+    "references/beat-direction.md",
+    "references/captions.md",
+    "references/css-patterns.md",
+    "references/design-picker.md",
+    "references/dynamic-techniques.md",
+    "references/motion-principles.md",
+    "references/narration.md",
+    "references/prompt-expansion.md",
+    "references/techniques.md",
+    "references/transcript-guide.md",
+    "references/transitions.md",
+    "references/transitions/catalog.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "1bd96e16da07244604c2422dc3f85498ff7355e9826f8323afbeac8b18105bd0",
+   "names": [
+    "figma"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "scripts/verify-motion.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "7d54924a941f7850faad1c30c43592c81b2d775009a43d94d511ac16d611789e",
+   "names": [
+    "visualize"
+   ],
+   "files_not_fully_read": 4,
+   "sample": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "assets/visualize.css",
+    "assets/visualize.html"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "daf2704368147597cd08baed7623d1ee5e3fb3fc65085a8de3a58952a896e81e",
+   "names": [
+    "changelog-video"
+   ],
+   "files_not_fully_read": 7,
+   "sample": [
+    "examples/master-skeleton.html",
+    "examples/script-tokens.json",
+    "references/build-spec.md",
+    "references/lexicon.json",
+    "references/script-voice.md",
+    "references/visualization-registry.md",
+    "scripts/align-captions.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "965b323bcb61288a7867348c767e1cffba1a36de28309ae37112ed24d070e819",
+   "names": [
+    "hyperframes-audio"
+   ],
+   "files_not_fully_read": 5,
+   "sample": [
+    "references/attributes.md",
+    "references/diagnosis.md",
+    "references/fx-registry.md",
+    "references/presets.md",
+    "scripts/carve.mjs"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "27a706abefad00b1053844cf98a052f849ed0886baca8b3964e8357ace1ef3e9",
+   "names": [
+    "openai-docs"
+   ],
+   "files_not_fully_read": 5,
+   "sample": [
+    "LICENSE.txt",
+    "assets/openai-small.svg",
+    "references/prompting-guide.md",
+    "references/upgrade-guide.md",
+    "references/upgrading-to-gpt-5p6-sol.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "ad421b645c528bb9488b75f5080c2047b8aea301dbdd4e15dfebd78794d425ea",
+   "names": [
+    "Spreadsheets"
+   ],
+   "files_not_fully_read": 18,
+   "sample": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "artifact_tool_docs/API_QUICK_START.md",
+    "artifact_tool_docs/DATA_TABLES.md",
+    "artifact_tool_docs/SPARKLINES.md",
+    "container_tools/mark_artifact_operation_started.mjs",
+    "domain_guidance/financial_models.md",
+    "domain_guidance/healthcare.md",
+    "domain_guidance/marketing_advertising.md",
+    "domain_guidance/scientific_research.md",
+    "features/charts.md",
+    "references/image-references.md",
+    "references/read_only_qna.md",
+    "references/template-elicitation.md",
+    "routing/google_sheets.md",
+    "style_guidelines.md",
+    "workflows/create_workflows.md",
+    "workflows/edit_workflows.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "2c3ade867e198e2f1bc3eee01d8fff9bd77c56d603b96ca60b2d8ee648dd64c3",
+   "names": [
+    "general-video"
+   ],
+   "files_not_fully_read": 3,
+   "sample": [
+    "scripts/frame-packets.mjs",
+    "scripts/frame-packets.test.mjs",
+    "sub-agents/frame-worker.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "80de195e756ec81d57c26aa17c00ee63cc33de96b2d8ec36b7ddc5caaa2e52f1",
+   "names": [
+    "skill-installer"
+   ],
+   "files_not_fully_read": 3,
+   "sample": [
+    "LICENSE.txt",
+    "agents/openai.yaml",
+    "assets/skill-installer-small.svg"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "0d21063cc07a0c59fb34603df0c98397b16ee43ac3b55aae33a12b7518eaadce",
+   "names": [
+    "cowork-plugin-customizer"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "918e6d8f34a546881db43842c125bf3ac0483c49bd1488f728bbd38a680dfdab",
+   "names": [
+    "hyperframes-keyframes"
+   ],
+   "files_not_fully_read": 2,
+   "sample": [
+    "agents/openai.yaml",
+    "references/keyframe-patterns.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "3eb3070138bb0965ab8330ddfc162a6752458ff1f9b4ac7300f5f4fd21ef8c36",
+   "names": [
+    "website-to-hyperframes"
+   ],
+   "files_not_fully_read": 7,
+   "sample": [
+    "references/step-1-capture.md",
+    "references/step-2-design.md",
+    "references/step-3-script.md",
+    "references/step-4-storyboard.md",
+    "references/step-5-vo.md",
+    "references/step-6-build.md",
+    "references/step-7-validate.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "98d2e2fb7aa433424d8df69c452d9d93b419938cd47251d94b704b181f9338ac",
+   "names": [
+    "contribute-catalog"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "templates.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "dcad54268dcb36ce6ddb6e75acebd4a32e1ecce688d51b8bca414e0f6aa3cd16",
+   "names": [
+    "seo-images"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "073e2df9fa898224d5736ab4bfa42848729b3fbde286869bd69de4fa1c494c36",
+   "names": [
+    "excel-live-control"
+   ],
+   "files_not_fully_read": 13,
+   "sample": [
+    "SKILL.md",
+    "agents/openai.yaml",
+    "domain_guidance/financial_models.md",
+    "domain_guidance/healthcare.md",
+    "domain_guidance/marketing_advertising.md",
+    "domain_guidance/scientific_research.md",
+    "features/charts.md",
+    "officejs.md",
+    "references/image-references.md",
+    "references/read_only_qna.md",
+    "style_guidelines.md",
+    "workflows/create_workflows.md",
+    "workflows/edit_workflows.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "f5130a147104abc76509a918b2268c185ae3d94cb9f7ac52fb94725d0b7ea7f4",
+   "names": [
+    "seo-google"
+   ],
+   "files_not_fully_read": 12,
+   "sample": [
+    "LICENSE.txt",
+    "assets/templates/cwv-audit-report.md",
+    "assets/templates/gsc-performance-report.md",
+    "assets/templates/indexation-status-report.md",
+    "references/ga4-data-api.md",
+    "references/keyword-planner-api.md",
+    "references/nlp-api.md",
+    "references/pagespeed-crux-api.md",
+    "references/rate-limits-quotas.md",
+    "references/search-console-api.md",
+    "references/supplementary-apis.md",
+    "references/youtube-api.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c38f8d1023c311dbb9ba3c2d741a06019f6219305bc44743a7903276dc19d0d3",
+   "names": [
+    "sites-building"
+   ],
+   "files_not_fully_read": 7,
+   "sample": [
+    "SKILL.md",
+    "references/authentication.md",
+    "references/environment.md",
+    "references/library-selection.md",
+    "references/persistence-and-storage.md",
+    "references/sqlite.md",
+    "references/webmcp.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "929959f278c0158653e0b6f5f1f69114cd2125e970f21ecae709676b1a09074e",
+   "names": [
+    "pdf"
+   ],
+   "files_not_fully_read": 3,
+   "sample": [
+    "FORMS.md",
+    "LICENSE.txt",
+    "REFERENCE.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "ba4dc69a83d4be7104115bd10db8f3e00edebcee73b308a78daed79a65b9b671",
+   "names": [
+    "seo-drift"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "references/comparison-rules.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "07297251cbf3aa964ad2df48f04185f082234e272dd2e022ed6e93a74926fd81",
+   "names": [
+    "seo-ecommerce"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "references/marketplace-endpoints.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c85cb0fe21b4bb1a5cfba9ac06c7fecebcc95e92cb81c21bf6f48f4e932ec7e5",
+   "names": [
+    "cut-the-curve"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "examples/gsap-implementation.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "503e450d17015992cd628c30ce81e86876d747a7ff0f586323a6a5887dfa9c91",
+   "names": [
+    "hyperframes-registry"
+   ],
+   "files_not_fully_read": 7,
+   "sample": [
+    "examples/add-block.md",
+    "examples/add-component.md",
+    "references/demo-html-pattern.md",
+    "references/discovery.md",
+    "references/install-locations.md",
+    "references/wiring-blocks.md",
+    "references/wiring-components.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "415d2a5d6d850b71e215e88fac0f51a56e1287a276e74d9b53141653a9351552",
+   "names": [
+    "seo-audit"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "898a8017c86d934ca8abf425b9c3122126e385d0ca8cd80fa8ca2cdba1aa5614",
+   "names": [
+    "seo-backlinks"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "013bc446e1be302a9db368715d75cd8b93fc171539bef1caeafa1efefa1913ee",
+   "names": [
+    "seo-competitor-pages"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "49c39bb271afcd56fcc035eeccbce7610ce191b32934ceb6b896f0467700f616",
+   "names": [
+    "seo-content"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "a08adc134979061f87f56056bc96d48ea834bba3a390b090cb03882a977e9d37",
+   "names": [
+    "seo-content-brief"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "849b8658c109c39c782774194f7457ed3b5e27f8d19fd6709aa33f0cd59df0ef",
+   "names": [
+    "seo-dataforseo"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "147fb9d2d1fa8177408cb732f9b0ae9d2964c35433e36f207a2a4e548605ba04",
+   "names": [
+    "seo-firecrawl"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "516fc04f9f2e460f97253aa787bb547d5078dc803dd0221a83b21e02a12d0ade",
+   "names": [
+    "seo-flow"
+   ],
+   "files_not_fully_read": 43,
+   "sample": [
+    "references/bibliography.md",
+    "references/flow-framework.md",
+    "references/flow-prompts.lock",
+    "references/prompts/find/content-planning-for-topical-relevance-prompt.md",
+    "references/prompts/find/content-prioritization-prompt.md",
+    "references/prompts/find/keyword-research-prompt.md",
+    "references/prompts/find/keyword-variations-for-topical-relevance-prompt.md",
+    "references/prompts/find/prompt-audience-avatar.md",
+    "references/prompts/leverage/backlink-competition-prompt.md",
+    "references/prompts/local/ai-homepage-rewrite-prompt.md",
+    "references/prompts/local/claude-deep-research-prompt.md",
+    "references/prompts/local/gbp-categories-prompt.md",
+    "references/prompts/local/gbp-description-claude-prompt-1.md",
+    "references/prompts/local/gbp-description-claude-prompt-2.md",
+    "references/prompts/local/gbp-description-claude-prompt-3.md",
+    "references/prompts/local/gbp-services-prompt.md",
+    "references/prompts/local/prompt-generating-a-meta-description.md",
+    "references/prompts/local/prompt-generating-a-title-tag.md",
+    "references/prompts/local/prompt-rewriting-existing-homepage.md",
+    "references/prompts/local/prompt-rewriting-existing-service-page.md",
+    "references/prompts/optimize/ai-detector-test-follow-up-prompt.md",
+    "references/prompts/optimize/ai-supporting-pages-rewrite-prompt.md",
+    "references/prompts/optimize/blog-post-outline-prompt.md",
+    "references/prompts/optimize/blog-post-writing-prompt.md",
+    "references/prompts/optimize/claude-prompt-1.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "598b28933a385754ed622a0dc9f3665a30e5b58b21070eb81f8ac7be0e0bb14b",
+   "names": [
+    "seo-geo"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "033ab1e69bf8ac3534f06c708c660664ad99eb1e95e2bb008c7f58135578a827",
+   "names": [
+    "seo-hreflang"
+   ],
+   "files_not_fully_read": 4,
+   "sample": [
+    "LICENSE.txt",
+    "references/content-parity.md",
+    "references/cultural-profiles.md",
+    "references/locale-formats.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "8b9cadcd71ce6dc7bd3ea2503516809e217f9464faa2f6f9b00c4a34068e0d9d",
+   "names": [
+    "seo-local"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "ac918717080f7e8547e0f963c44f3edde3a7353b4752faae1851c90bfe1a32c7",
+   "names": [
+    "seo-maps"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "d7a1227590cc1372781e410dbe8f08714c86705297ba80110e777994fa78d3b6",
+   "names": [
+    "seo-page"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "af7644de8f7b6e55107ed551097976cf837577a43d0794752a0b4f5f8b7e4ea4",
+   "names": [
+    "seo-plan"
+   ],
+   "files_not_fully_read": 7,
+   "sample": [
+    "LICENSE.txt",
+    "assets/agency.md",
+    "assets/ecommerce.md",
+    "assets/generic.md",
+    "assets/local-service.md",
+    "assets/publisher.md",
+    "assets/saas.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c804c2623f9146654e0e62078193c2d7662c36b048acbe71b84eecbf44938934",
+   "names": [
+    "seo-programmatic"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "c71592fa30b7587914836297d4a28357fe3fe3bd6963f227791c396ecf35d013",
+   "names": [
+    "seo-schema"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "594ea8f2f27edf66943be0e38138e361e07b6997689cbf4772b0d1b1343419c6",
+   "names": [
+    "seo-sitemap"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "f9991774cce033e40039a9758c47ee785656d51a9abd87df8b2ca4e86e3df779",
+   "names": [
+    "seo-sxo"
+   ],
+   "files_not_fully_read": 4,
+   "sample": [
+    "references/page-type-taxonomy.md",
+    "references/persona-scoring.md",
+    "references/user-story-framework.md",
+    "references/wireframe-templates.md"
+   ]
+  },
+  {
+   "type": "target_files",
+   "target_id": "a14c2b575eb5fbc358c452ea9180f9170bd7a9a3b06206e415ba8f25f8fb54c6",
+   "names": [
+    "seo-technical"
+   ],
+   "files_not_fully_read": 1,
+   "sample": [
+    "LICENSE.txt"
+   ]
+  }
+ ]
+}
