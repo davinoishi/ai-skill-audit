@@ -14,7 +14,7 @@ Companion material for the Empty Folder video. Everything here is evidence you c
 | `report/verification.json` | Counts proving all 140 skills and all 7,530 findings are accounted for exactly once |
 | `report/finding-assessments.json` | Every finding: rule, severity, file, line, hash, verdict, reasoning (17 MB) |
 | `report/target-reviews.json` | Every skill: per-file review depth and hashes, concerns, gaps, next steps (4 MB) |
-| `patch/` | A tested patch for two confirmed flaws in the media-use skill |
+| `patch/` | A tested patch for two confirmed flaws in the media-use skill, plus `reharden.py` — the script that strips the silent-update instructions and pins the CLI, re-runnable after every vendor update |
 
 ## The short version
 

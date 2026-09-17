@@ -32,6 +32,7 @@ If your copies differ, the installer refuses to touch them. That's the intended 
 | `install.sh` | Applies it to every installed copy, with hash checks, backups and verification |
 | `restore.sh` | Puts the originals back from the newest backup |
 | `patch.test.mjs` | Node test suite: 6 tests, no network |
+| `reharden.py` | Re-applies the *instruction-level* hardening: removes the silent-update preamble, pins the CLI, restores the approval-required note |
 
 ## Install
 
@@ -76,3 +77,39 @@ An update overwrites these files. Run `install.sh` again. If upstream has change
 ## Note
 
 Unofficial, not affiliated with HeyGen or Anthropic. The diff is offered as security commentary; the skill's code remains its authors'. No warranty — read it before you run it.
+
+---
+
+# reharden.py — the instruction-level hardening
+
+Separate from the code patch above. The review found that ten HyperFrames workflow skills opened with a line telling the agent to update the skill from the network — quote — "run silently, don't ask", and that the router skill told the agent to upgrade the CLI to `@latest` and "act on the signal rather than relaying it to the user". See `../report/SUMMARY.md`, concerns `HF-SILENT-SKILL-UPDATE` and `HF-PACKAGE-LOADER-LATEST`.
+
+```bash
+python3 reharden.py             # apply
+python3 reharden.py --dry-run   # preview
+HF_PIN=0.8.40 python3 reharden.py
+HF_EXTRA_ROOTS=~/code/project/.agents/skills python3 reharden.py
+```
+
+Across every installed HyperFrames-family copy — the plugin cache at any version, `~/.claude/skills`, `~/.agents/skills`, plus anything in `HF_EXTRA_ROOTS`; `~/.codex/skills` symlinks are de-duplicated — it:
+
+1. deletes the "First, keep this skill fresh — run silently, don't ask" preamble;
+2. pins agent-facing `npx hyperframes` and `npx hyperframes@latest` calls to one version (default `0.8.32`; set your own with `HF_PIN`);
+3. re-adds a note to `hyperframes` and `general-video` requiring your approval before any skill update or CLI upgrade, and rewrites the two instructions that told the agent to upgrade by itself.
+
+It's idempotent, backs up every rewritten file to `backups/<timestamp>/`, skips test files and binaries, and finishes by checking that `HYPERFRAMES_SKIP_SKILLS` is still set in `~/.claude/settings.json` and `~/.codex/config.toml`.
+
+**Pair it with the environment switch.** The script edits files; the vendor's own opt-out is the environment variable. Set `HYPERFRAMES_SKIP_SKILLS=1` (and, if you want telemetry off, `HYPERFRAMES_NO_TELEMETRY=1` and `DO_NOT_TRACK=1`) in the `env` block of `~/.claude/settings.json` and in `[shell_environment_policy.set]` in `~/.codex/config.toml`.
+
+**Verified 2026-09-17:** a dry-run against an already-hardened install reports 0 changes; restoring the pre-hardening originals into a test home and running it rewrote 191 files — 10 preambles removed, 1,031 unpinned `npx hyperframes` calls pinned — and the immediate re-run reported 0.
+
+## After any HyperFrames update
+
+An update overwrites both the code patch and the instruction edits. Re-apply both:
+
+```bash
+python3 reharden.py
+bash install.sh
+```
+
+If upstream has changed the two patched files, `install.sh` prints WARNINGs and touches nothing — check whether they fixed it themselves before rebuilding the patch.
