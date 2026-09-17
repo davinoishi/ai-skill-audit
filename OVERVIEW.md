@@ -24,7 +24,7 @@
 **Sources covered:** `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills`, the Claude plugin cache (HyperFrames 0.8.3, etc.), Cowork skills, the Codex plugin caches (Office, Sites, template-creator, etc.), AI_Brain project skills, your own commands and scheduled tasks.
 
 **Method:**
-- Automated scan with SkillSpector 2.11.2.
+- Automated scan with [SkillSpector](https://github.com/NVIDIA/SkillSpector) 2.11.2 (NVIDIA, Apache-2.0).
 - A static, evidence-based review of every target and every finding against copied snapshots.
 - Nothing from the skills was executed, no credentials were read, and no network calls were made. Earlier controlled runtime tests were used as evidence where they applied.
 
