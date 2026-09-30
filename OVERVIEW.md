@@ -151,7 +151,7 @@ Risks 1-7 and 10 are closed by removal, not by a fix in the vendors' code. The "
 ### Still open
 
 - Cowork Office `/tmp` LibreOffice state (risk 8) and the upstream reports for the vendor skills: not sent.
-- The 128 unresolved findings were re-triaged on 2026-09-30: 124 are closed by removal (the skill is gone; nothing was re-read), and 4 stay open until Codex's leftover runtime cache is deleted. None is unresolved and relevant to a skill still installed. Of the seven proposed tests only the Cowork LibreOffice one still applies. The counts in §2 are unchanged from the original scan.
+- The 128 unresolved findings were re-triaged on 2026-09-30: 124 are closed by removal (the skill is gone; nothing was re-read), and the last 4 were closed when Codex's leftover runtime cache was deleted and confirmed gone. None is unresolved and relevant to a skill still installed. Of the seven proposed tests only the Cowork LibreOffice one still applies. The counts in §2 are unchanged from the original scan.
 - The raw scanner output and the copied bundles are kept as evidence.
 
 If you run any of these skills yourself, the ranked actions in §3 still apply to you.
