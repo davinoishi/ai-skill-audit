@@ -16,6 +16,10 @@ Companion material for the Empty Folder video. Everything here is evidence you c
 | `report/target-reviews.json` | Every skill: per-file review depth and hashes, concerns, gaps, next steps (4 MB) |
 | `patch/` | A tested patch for two confirmed flaws in the media-use skill, plus `reharden.py` — the script that strips the silent-update instructions and pins the CLI, re-runnable after every vendor update |
 
+## Status
+
+Updated 2026-09-30. After the review the owner removed HyperFrames, impeccable and Codex from the machine and fixed the SEO pipeline's checksum gap. Nine of the ten ranked risks are closed (seven by removal, not by a vendor fix) and one is open. The media-use patch in `patch/` is kept for anyone still using that skill; it is no longer installed on the reviewed machine. `OVERVIEW.md` §6 and `report/SUMMARY.md` §9 have the detail.
+
 ## The short version
 
 - **Nothing malicious was found.** The risk is supply-chain and trust-boundary design.

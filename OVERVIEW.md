@@ -4,6 +4,8 @@
 **Detail:** `llm-review-handoff/review-output/` (SUMMARY.md, coverage-gaps.md, finding-assessments.json, target-reviews.json, verification.json)
 **Changes and backups:** `remediation-2026-09-16/`
 
+> **Status update 2026-09-30:** after this review the owner removed HyperFrames, impeccable and Codex from the machine and fixed the checksum gap in the SEO pipeline, which closes or moots most of the open items below. §§1-5 are the review as it stood on 2026-09-16; **§6 is the current state.**
+
 ---
 
 ## 1. What was scanned
@@ -112,3 +114,45 @@ Seven tests are specified in `coverage-gaps.md` §8:
 - Network or offline mirror for advisory and hash checks.
 - A Python 3.12 sandbox.
 - Read access to the noBGP share and its ACLs.
+
+---
+
+## 6. Update 2026-09-30: removals and current status
+
+### What was removed or fixed
+
+| Item | Date | Result |
+|---|---|---|
+| HyperFrames Claude plugin (0.8.3), plus the skills bundled with it including `media-use` and the `seo` skill | by 2026-09-28 | Uninstalled. Only the owner's own `seo-pipeline-run` skill and `remotion-best-practices` remain in the user skill folders |
+| 14 HyperFrames-family skills in <vault> (`hyperframes`, `hyperframes-cli`, `-media`, `-registry`, `animejs`, `gsap`, `lottie`, `three`, `tailwind`, `typegpu`, `waapi`, `css-animations`, `contribute-catalog`, `remotion-to-hyperframes`, `website-to-hyperframes`) | 2026-09-30 | Moved to the Trash, with their lockfile entries, a `npx hyperframes` permission rule and the local cache |
+| impeccable: quarantined skill, binaries, subagents and five per-project `.impeccable/` output folders | 2026-09-30 | Moved to the Trash |
+| Codex: the `.codex` home folders, its application-support folder and a Codex workspace folder | 2026-09-30 | Removed. No Codex config remains |
+| Re-harden script, media-use patch, and the backups from the first round of fixes | 2026-09-30 | Moved to the Trash. Copies of the patch and script remain in `patch/` here |
+| Claude Code settings | 2026-09-30 | No `HYPERFRAMES_*` env lines or Gemini key remain. `DISABLE_TELEMETRY` and `DO_NOT_TRACK` still set |
+| SEO pipeline checksums | 2026-09-28 | Skill copies its nine executable inputs off the shared drive and verifies pinned sha256 values before running any of them |
+
+### Effect on the ranked findings (§3)
+
+| # | Status |
+|---|---|
+| 1 HyperFrames silent self-update | **Closed by removal** |
+| 2 impeccable binary | **Closed by removal** |
+| 3 media-use | **Closed by removal.** Tested patch kept in `patch/` |
+| 4 SEO skill | **Closed.** Skill uninstalled; no key found in settings |
+| 5 embedded-captions `~/Downloads` fallback | **Closed by removal** |
+| 6 Codex skill-installer | **Closed by removal** of Codex |
+| 7 Sites auto-publish | **Closed by removal** of Codex |
+| 8 Cowork Office `/tmp` LibreOffice state | **Open.** Upstream report not yet sent |
+| 9 SEO pipeline runs share scripts unchecked | **Fixed 2026-09-28** |
+| 10 Default-on telemetry | **Closed.** Tools removed; Claude Code telemetry stays off |
+
+Risks 1-7 and 10 are closed by removal, not by a fix in the vendors' code. The "whole-disk read access" issue in §3 is closed for Codex (removed) and limited for Claude Code by the sandbox described in §4.
+
+### Still open
+
+- Cowork Office `/tmp` LibreOffice state (risk 8) and the upstream reports for the vendor skills: not sent.
+- The 128 unresolved findings were re-triaged on 2026-09-30: 124 are closed by removal (the skill is gone; nothing was re-read), and 4 stay open until Codex's leftover runtime cache is deleted. None is unresolved and relevant to a skill still installed. Of the seven proposed tests only the Cowork LibreOffice one still applies. The counts in §2 are unchanged from the original scan.
+- The raw scanner output and the copied bundles are kept as evidence.
+
+If you run any of these skills yourself, the ranked actions in §3 still apply to you.
+
