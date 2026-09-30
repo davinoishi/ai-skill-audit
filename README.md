@@ -18,7 +18,7 @@ Companion material for the Empty Folder video. Everything here is evidence you c
 
 ## Status
 
-Updated 2026-09-30. After the review the owner removed HyperFrames, impeccable and Codex from the machine and fixed the SEO pipeline's checksum gap. Nine of the ten ranked risks are closed (seven by removal, not by a vendor fix) and one (the Cowork Office `/tmp` state) was reported upstream on 2026-09-30 and awaits a fix. The media-use patch in `patch/` is kept for anyone still using that skill; it is no longer installed on the reviewed machine. `OVERVIEW.md` §6 and `report/SUMMARY.md` §9 have the detail.
+Updated 2026-09-30. After the review the owner removed HyperFrames, impeccable and Codex from the machine and fixed the SEO pipeline's checksum gap. Nine of the ten ranked risks are closed (eight by removal, one by a fix of our own, none by a vendor fix) and one (the Cowork Office `/tmp` state) was reported upstream on 2026-09-30 and awaits a fix. The media-use patch in `patch/` is kept for anyone still using that skill; it is no longer installed on the reviewed machine. `OVERVIEW.md` §6 and `report/SUMMARY.md` §9 have the detail.
 
 ## The short version
 
