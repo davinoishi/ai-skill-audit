@@ -183,7 +183,7 @@ The initial ledger was rechecked, not trusted. 39 RP1 keys the ledger had marked
 - **Cowork Office `/tmp` LibreOffice state (risk 8):** an upstream report, not yet sent. Re-checked 2026-09-30: the affected scripts are unchanged in the installed version and nothing has been planted in the shared temp paths.
 - **Upstream reports** for the vendor skills in this report have not been sent.
 - **The 128 unresolved findings were re-triaged on 2026-09-30.** 124 are closed by removal (SEO skill 88, HyperFrames family 31, impeccable 4, one Codex plugin). "Closed by removal" means the skill is no longer on the machine; the missing evidence was not obtained and nothing was re-read. The other 4 (the Presentations bytecode and one Spreadsheets reference) sat in Codex's leftover runtime cache, which was deleted the same day and confirmed gone, so they are closed too. None is unresolved and relevant to a skill that is still installed. Of the seven proposed tests only the Cowork LibreOffice shared-profile test still applies. The counts in §§6-7 are unchanged from the original scan.
-- **Scan evidence** is kept: the raw scanner output and the copied bundles it was run on.
+- **Scan evidence:** the raw scanner output and the copied skill bundles were deleted from the author's machines after this report was published. The findings themselves, with file, line, hash and verdict, are in `finding-assessments.json`; the scanner can be re-run against the upstream copies of these skills to reproduce them.
 
 ### A note on how these were closed
 
