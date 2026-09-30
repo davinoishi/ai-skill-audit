@@ -142,7 +142,7 @@ Seven tests are specified in `coverage-gaps.md` §8:
 | 5 embedded-captions `~/Downloads` fallback | **Closed by removal** |
 | 6 Codex skill-installer | **Closed by removal** of Codex |
 | 7 Sites auto-publish | **Closed by removal** of Codex |
-| 8 Cowork Office `/tmp` LibreOffice state | **Open.** Upstream report not yet sent |
+| 8 Cowork Office `/tmp` LibreOffice state | **Reported upstream 2026-09-30**; awaiting a response, no fix yet |
 | 9 SEO pipeline runs share scripts unchecked | **Fixed 2026-09-28** |
 | 10 Default-on telemetry | **Closed.** Tools removed; Claude Code telemetry stays off |
 
@@ -150,7 +150,7 @@ Risks 1-7 and 10 are closed by removal, not by a fix in the vendors' code. The "
 
 ### Still open
 
-- Cowork Office `/tmp` LibreOffice state (risk 8) and the upstream reports for the vendor skills: not sent.
+- Cowork Office `/tmp` LibreOffice state (risk 8): reported upstream on 2026-09-30, together with three smaller skill-creator and docx hardening items. No response or fix yet. The other vendors' skills in this report (HyperFrames, impeccable, media-use, SEO, Codex) have not been reported, and are no longer installed on the reviewed machine.
 - The 128 unresolved findings were re-triaged on 2026-09-30: 124 are closed by removal (the skill is gone; nothing was re-read), and the last 4 were closed when Codex's leftover runtime cache was deleted and confirmed gone. None is unresolved and relevant to a skill still installed. Of the seven proposed tests only the Cowork LibreOffice one still applies. The counts in §2 are unchanged from the original scan.
 - The raw scanner output and the copied skill bundles were deleted from the author's machines after this report was published. The findings themselves, with file, line, hash and verdict, are in `report/finding-assessments.json`; the scanner can be re-run against the upstream copies of these skills to reproduce them.
 
